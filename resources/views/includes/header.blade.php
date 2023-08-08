@@ -21,8 +21,7 @@
                                         <a href="/">Home</a>
                                     </li>
                                     <li class="has-dropdown has-megaitem">
-                                        <a href="product-details-default.html">Shop <i
-                                                class="fa fa-angle-down"></i></a>
+                                        <a href="product-details-default.html">Shop <i class="fa fa-angle-down"></i></a>
                                         <!-- Mega Menu -->
                                         <div class="mega-menu">
                                             <ul class="mega-menu-inner">
@@ -91,8 +90,8 @@
                                             </ul>
                                             <div class="menu-banner">
                                                 <a href="#" class="menu-banner-link">
-                                                    <img class="menu-banner-img"
-                                                        src="images/banner/menu-banner.jpg" alt="">
+                                                    <img class="menu-banner-img" src="images/banner/menu-banner.jpg"
+                                                        alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -215,10 +214,6 @@
                 <ul>
                     <li>
                         <a href="#"><span>Home</span></a>
-                        <ul class="mobile-sub-menu">
-                            <li><a href="/">Home 1</a></li>
-
-                        </ul>
                     </li>
                     <li>
                         <a href="#"><span>Shop</span></a>
@@ -267,45 +262,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><span>Blogs</span></a>
-                        <ul class="mobile-sub-menu">
-                            <li>
-                                <a href="#">Blog Grid</a>
-                                <ul class="mobile-sub-menu">
-                                    <li><a href="blog-grid-sidebar-left.html">Blog Grid Sidebar left</a></li>
-                                    <li><a href="blog-grid-sidebar-right.html">Blog Grid Sidebar Right</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="blog-full-width.html">Blog Full Width</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog List</a>
-                                <ul class="mobile-sub-menu">
-                                    <li><a href="blog-list-sidebar-left.html">Blog List Sidebar left</a></li>
-                                    <li><a href="blog-list-sidebar-right.html">Blog List Sidebar Right</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Blog Single</a>
-                                <ul class="mobile-sub-menu">
-                                    <li><a href="blog-single-sidebar-left.html">Blog Single Sidebar left</a></li>
-                                    <li><a href="blog-single-sidebar-right.html">Blog Single Sidebar Right</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span>Pages</span></a>
-                        <ul class="mobile-sub-menu">
-                            <li><a href="faq.html">Frequently Questions</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="404.html">404 Page</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="about-us.html">Sobre nós</a></li>
+                    <li><a href="contact-us.html">Contato</a></li>
                 </ul>
             </div> <!-- End Mobile Menu Nav -->
         </div> <!-- End Mobile Menu -->
@@ -317,9 +275,9 @@
             </div>
 
             <address class="address">
-                <span>Address: Your address goes here.</span>
-                <span>Call Us: 0123456789, 0123456789</span>
-                <span>Email: demo@example.com</span>
+                <span>Endereço: Rua Taleira Flamejante</span>
+                <span>Email: info@ingressos.com</span>
+
             </address>
 
             <ul class="social-link">
@@ -330,9 +288,9 @@
             </ul>
 
             <ul class="user-link">
-                <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="wishlist.html">Favoritos</a></li>
+                <li><a href="cart.html">Carrinho</a></li>
+                <li><a href="checkout.html">Finalizar</a></li>
             </ul>
         </div>
         <!-- End Mobile contact Info -->

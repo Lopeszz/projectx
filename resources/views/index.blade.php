@@ -26,8 +26,7 @@
                                     <div class="hero-slider-content">
                                         <h4 class="subtitle">New collection</h4>
                                         <h2 class="title">Best Of NeoCon <br> Gold Award </h2>
-                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">shop
-                                            now </a>
+                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">Compre agora</a>
                                     </div>
                                 </div>
                             </div>
@@ -48,8 +47,7 @@
                                     <div class="hero-slider-content">
                                         <h4 class="subtitle">New collection</h4>
                                         <h2 class="title">Luxy Chairs <br> Design Award </h2>
-                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">shop
-                                            now </a>
+                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">Compre agora</a>
                                     </div>
                                 </div>
                             </div>

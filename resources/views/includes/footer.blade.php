@@ -59,7 +59,6 @@
                                     ingressos para os seus eventos favoritos.</p>
 
                                 <address class="address">
-                                    <span>Endereço: Seu endereço aqui.</span>
                                     <span>Email: info@ingressos.com</span>
                                 </address>
                             </div>
