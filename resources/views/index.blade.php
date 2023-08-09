@@ -24,8 +24,8 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <div class="hero-slider-content">
-                                        <h4 class="subtitle">New collection</h4>
-                                        <h2 class="title">Best Of NeoCon <br> Gold Award </h2>
+                                        <h4 class="subtitle">Coleção 2023</h4>
+                                        <h2 class="title">O melhor evento <br> Festa dos Gabira </h2>
                                         <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">Compre agora</a>
                                     </div>
                                 </div>
@@ -45,8 +45,8 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <div class="hero-slider-content">
-                                        <h4 class="subtitle">New collection</h4>
-                                        <h2 class="title">Luxy Chairs <br> Design Award </h2>
+                                        <h4 class="subtitle">Coleção 2023</h4>
+                                        <h2 class="title">A Melhor Putaria<br>Festa do Sinal </h2>
                                         <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">Compre agora</a>
                                     </div>
                                 </div>
