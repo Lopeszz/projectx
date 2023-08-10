@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\ClienteController;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -20,3 +22,8 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/clientes', [ClienteController::class, 'index']);
+Route::get('/clientes/create', [ClienteController::class, 'create']);
+
+Route::post('/clientes', [ClienteController::class], 'store');
