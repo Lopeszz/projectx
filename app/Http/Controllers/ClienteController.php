@@ -12,11 +12,14 @@ class ClienteController extends Controller
     {
         $clientes = Cliente::all();
         return view('clientes.index', compact('clientes'));
+
     }
+
     public function create()
     {
         return view('clientes.create');
     }
+
     public function store(Request $request)
     {
         $cliente = new Cliente;
