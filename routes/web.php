@@ -23,6 +23,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/sobrenos', function () {
+    return view('sobrenos');
+});
+
 Route::get('/clientes/create', [ClienteController::class, 'create']);
 Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
 Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
