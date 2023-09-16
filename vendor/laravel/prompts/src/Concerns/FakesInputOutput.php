@@ -39,7 +39,6 @@ trait FakesInputOutput
      */
     public static function assertOutputContains(string $string): void
     {
-<<<<<<< HEAD
         Assert::assertStringContainsString($string, static::content());
     }
 
@@ -85,12 +84,5 @@ trait FakesInputOutput
     public static function strippedContent(): string
     {
         return preg_replace("/\e\[[0-9;?]*[A-Za-z]/", '', static::content());
-=======
-        if (! static::output() instanceof BufferedConsoleOutput) {
-            throw new RuntimeException('Prompt must be faked before asserting output.');
-        }
-
-        Assert::assertStringContainsString($string, static::output()->content());
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 }

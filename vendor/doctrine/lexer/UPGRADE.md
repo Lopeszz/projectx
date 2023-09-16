@@ -6,17 +6,6 @@ awareness about deprecated code.
 - Use of our low-overhead runtime deprecation API, details:
   https://github.com/doctrine/deprecations/
 
-<<<<<<< HEAD
-=======
-# Upgrade to 3.0.0
-
-`Doctrine\Common\Lexer\Token` no longer implements `ArrayAccess`.
-Parameter type declarations have been added to
-`Doctrine\Common\Lexer\AbstractLexer` and `Doctrine\Common\Lexer\Token`.
-You should add both parameter type declarations and return type declarations to
-your lexers, based on the `@return` phpdoc.
-
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 # Upgrade to 2.0.0
 
 `AbstractLexer::glimpse()` and `AbstractLexer::peek()` now return

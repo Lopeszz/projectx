@@ -65,26 +65,20 @@ function display_help {
     echo "  ${GREEN}sail npx${NC}            Run a npx command"
     echo "  ${GREEN}sail npm run prod${NC}"
     echo
-<<<<<<< HEAD
     echo "${YELLOW}PNPM Commands:${NC}"
     echo "  ${GREEN}sail pnpm ...${NC}        Run a pnpm command"
     echo "  ${GREEN}sail pnpx${NC}            Run a pnpx command"
     echo "  ${GREEN}sail pnpm run prod${NC}"
     echo
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     echo "${YELLOW}Yarn Commands:${NC}"
     echo "  ${GREEN}sail yarn ...${NC}        Run a Yarn command"
     echo "  ${GREEN}sail yarn run prod${NC}"
     echo
-<<<<<<< HEAD
     echo "${YELLOW}Bun Commands:${NC}"
     echo "  ${GREEN}sail bun ...${NC}        Run a bun command"
     echo "  ${GREEN}sail bunx${NC}           Run a bunx command"
     echo "  ${GREEN}sail bun run prod${NC}"
     echo
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     echo "${YELLOW}Database Commands:${NC}"
     echo "  ${GREEN}sail mysql${NC}     Start a MySQL CLI session within the 'mysql' container"
     echo "  ${GREEN}sail mariadb${NC}   Start a MySQL CLI session within the 'mariadb' container"
@@ -407,7 +401,6 @@ elif [ "$1" == "npx" ]; then
         sail_is_not_running
     fi
 
-<<<<<<< HEAD
 # Proxy PNPM commands to the "pnpm" binary on the application container...
 elif [ "$1" == "pnpm" ]; then
     shift 1
@@ -432,8 +425,6 @@ elif [ "$1" == "pnpx" ]; then
         sail_is_not_running
     fi
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 # Proxy YARN commands to the "yarn" binary on the application container...
 elif [ "$1" == "yarn" ]; then
     shift 1
@@ -446,7 +437,6 @@ elif [ "$1" == "yarn" ]; then
         sail_is_not_running
     fi
 
-<<<<<<< HEAD
 # Proxy Bun commands to the "bun" binary on the application container...
 elif [ "$1" == "bun" ]; then
     shift 1
@@ -471,8 +461,6 @@ elif [ "$1" == "bunx" ]; then
         sail_is_not_running
     fi
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 # Initiate a MySQL CLI terminal session within the "mysql" container...
 elif [ "$1" == "mysql" ]; then
     shift 1

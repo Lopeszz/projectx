@@ -2,10 +2,7 @@
 
 namespace Illuminate\Queue;
 
-<<<<<<< HEAD
 use Illuminate\Queue\Attributes\WithoutRelations;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use ReflectionClass;
 use ReflectionProperty;
 
@@ -22,7 +19,6 @@ trait SerializesModels
     {
         $values = [];
 
-<<<<<<< HEAD
         $reflectionClass = new ReflectionClass($this);
 
         [$class, $properties, $classLevelWithoutRelations] = [
@@ -30,11 +26,6 @@ trait SerializesModels
             $reflectionClass->getProperties(),
             ! empty($reflectionClass->getAttributes(WithoutRelations::class)),
         ];
-=======
-        $properties = (new ReflectionClass($this))->getProperties();
-
-        $class = get_class($this);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         foreach ($properties as $property) {
             if ($property->isStatic()) {
@@ -59,15 +50,11 @@ trait SerializesModels
                 $name = "\0*\0{$name}";
             }
 
-<<<<<<< HEAD
             $values[$name] = $this->getSerializedPropertyValue(
                 $value,
                 ! $classLevelWithoutRelations &&
                     empty($property->getAttributes(WithoutRelations::class))
             );
-=======
-            $values[$name] = $this->getSerializedPropertyValue($value);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         return $values;

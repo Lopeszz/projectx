@@ -10,11 +10,8 @@
 namespace PHPUnit\TextUI\XmlConfiguration;
 
 use const PHP_VERSION;
-<<<<<<< HEAD
 use function array_merge;
 use function array_unique;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use function explode;
 use function in_array;
 use function is_dir;
@@ -57,19 +54,12 @@ final class TestSuiteMapper
                     continue;
                 }
 
-<<<<<<< HEAD
-=======
-                $testSuite      = TestSuiteObject::empty($testSuiteConfiguration->name());
-                $testSuiteEmpty = true;
-
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $exclude = [];
 
                 foreach ($testSuiteConfiguration->exclude()->asArray() as $file) {
                     $exclude[] = $file->path();
                 }
 
-<<<<<<< HEAD
                 $files = [];
 
                 foreach ($testSuiteConfiguration->directories() as $directory) {
@@ -77,14 +67,10 @@ final class TestSuiteMapper
                         throw new TestDirectoryNotFoundException($directory->path());
                     }
 
-=======
-                foreach ($testSuiteConfiguration->directories() as $directory) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     if (!version_compare(PHP_VERSION, $directory->phpVersion(), $directory->phpVersionOperator()->asString())) {
                         continue;
                     }
 
-<<<<<<< HEAD
                     $files = array_merge(
                         $files,
                         (new Facade)->getFilesAsArray(
@@ -94,22 +80,6 @@ final class TestSuiteMapper
                             $exclude,
                         ),
                     );
-=======
-                    $files = (new Facade)->getFilesAsArray(
-                        $directory->path(),
-                        $directory->suffix(),
-                        $directory->prefix(),
-                        $exclude,
-                    );
-
-                    if (!empty($files)) {
-                        $testSuite->addTestFiles($files);
-
-                        $testSuiteEmpty = false;
-                    } elseif (!str_contains($directory->path(), '*') && !is_dir($directory->path())) {
-                        throw new TestDirectoryNotFoundException($directory->path());
-                    }
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 }
 
                 foreach ($testSuiteConfiguration->files() as $file) {
@@ -121,7 +91,6 @@ final class TestSuiteMapper
                         continue;
                     }
 
-<<<<<<< HEAD
                     $files[] = $file->path();
                 }
 
@@ -130,14 +99,6 @@ final class TestSuiteMapper
 
                     $testSuite->addTestFiles(array_unique($files));
 
-=======
-                    $testSuite->addTestFile($file->path());
-
-                    $testSuiteEmpty = false;
-                }
-
-                if (!$testSuiteEmpty) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     $result->addTest($testSuite);
                 }
             }

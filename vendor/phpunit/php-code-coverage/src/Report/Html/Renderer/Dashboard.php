@@ -18,15 +18,10 @@ use function floor;
 use function json_encode;
 use function sprintf;
 use function str_replace;
-<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\AbstractNode;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\Template\Exception;
-=======
-use SebastianBergmann\CodeCoverage\Node\AbstractNode;
-use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use SebastianBergmann\Template\Template;
 
 /**
@@ -65,7 +60,6 @@ final class Dashboard extends Renderer
             ]
         );
 
-<<<<<<< HEAD
         try {
             $template->renderTo($file);
         } catch (Exception $e) {
@@ -75,9 +69,6 @@ final class Dashboard extends Renderer
                 $e
             );
         }
-=======
-        $template->renderTo($file);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     protected function activeBreadcrumb(AbstractNode $node): string

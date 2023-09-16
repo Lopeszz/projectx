@@ -42,10 +42,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
-<<<<<<< HEAD
 use WeakMap;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 class Handler implements ExceptionHandlerContract
 {
@@ -124,7 +121,6 @@ class Handler implements ExceptionHandlerContract
     ];
 
     /**
-<<<<<<< HEAD
      * Indicates that exception reporting should be deduplicated.
      *
      * @var bool
@@ -139,8 +135,6 @@ class Handler implements ExceptionHandlerContract
     protected $reportedExceptionMap;
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create a new exception handler instance.
      *
      * @param  \Illuminate\Contracts\Container\Container  $container
@@ -150,11 +144,8 @@ class Handler implements ExceptionHandlerContract
     {
         $this->container = $container;
 
-<<<<<<< HEAD
         $this->reportedExceptionMap = new WeakMap;
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $this->register();
     }
 
@@ -286,11 +277,8 @@ class Handler implements ExceptionHandlerContract
      */
     protected function reportThrowable(Throwable $e): void
     {
-<<<<<<< HEAD
         $this->reportedExceptionMap[$e] = true;
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if (Reflector::isCallable($reportCallable = [$e, 'report']) &&
             $this->container->call($reportCallable) !== false) {
             return;
@@ -304,11 +292,7 @@ class Handler implements ExceptionHandlerContract
 
         try {
             $logger = $this->container->make(LoggerInterface::class);
-<<<<<<< HEAD
         } catch (Exception) {
-=======
-        } catch (Exception $ex) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             throw $e;
         }
 
@@ -342,13 +326,10 @@ class Handler implements ExceptionHandlerContract
      */
     protected function shouldntReport(Throwable $e)
     {
-<<<<<<< HEAD
         if ($this->deduplicateReporting && ($this->reportedExceptionMap[$e] ?? false)) {
             return true;
         }
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $dontReport = array_merge($this->dontReport, $this->internalDontReport);
 
         return ! is_null(Arr::first($dontReport, fn ($type) => $e instanceof $type));
@@ -412,11 +393,7 @@ class Handler implements ExceptionHandlerContract
             return array_filter([
                 'userId' => Auth::id(),
             ]);
-<<<<<<< HEAD
         } catch (Throwable) {
-=======
-        } catch (Throwable $e) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             return [];
         }
     }
@@ -529,11 +506,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Throwable  $e
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     protected function renderExceptionResponse($request, Throwable $e)
     {
@@ -547,11 +520,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Auth\AuthenticationException  $exception
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     protected function unauthenticated($request, AuthenticationException $exception)
     {
@@ -583,11 +552,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Validation\ValidationException  $exception
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     protected function invalid($request, ValidationException $exception)
     {
@@ -628,11 +593,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Throwable  $e
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     protected function prepareResponse($request, Throwable $e)
     {
@@ -849,7 +810,6 @@ class Handler implements ExceptionHandlerContract
     }
 
     /**
-<<<<<<< HEAD
      * Do not report duplicate exceptions.
      *
      * @return $this
@@ -862,8 +822,6 @@ class Handler implements ExceptionHandlerContract
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Determine if the given exception is an HTTP exception.
      *
      * @param  \Throwable  $e

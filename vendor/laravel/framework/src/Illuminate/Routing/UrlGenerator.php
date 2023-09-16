@@ -90,7 +90,6 @@ class UrlGenerator implements UrlGeneratorContract
     protected $keyResolver;
 
     /**
-<<<<<<< HEAD
      * The missing named route resolver callable.
      *
      * @var callable
@@ -98,8 +97,6 @@ class UrlGenerator implements UrlGeneratorContract
     protected $missingNamedRouteResolver;
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * The callback to use to format hosts.
      *
      * @var \Closure
@@ -474,14 +471,11 @@ class UrlGenerator implements UrlGeneratorContract
             return $this->toRoute($route, $parameters, $absolute);
         }
 
-<<<<<<< HEAD
         if (! is_null($this->missingNamedRouteResolver) &&
             ! is_null($url = call_user_func($this->missingNamedRouteResolver, $name, $parameters, $absolute))) {
             return $url;
         }
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         throw new RouteNotFoundException("Route [{$name}] not defined.");
     }
 
@@ -839,7 +833,6 @@ class UrlGenerator implements UrlGeneratorContract
     }
 
     /**
-<<<<<<< HEAD
      * Set the callback that should be used to attempt to resolve missing named routes.
      *
      * @param  callable  $missingNamedRouteResolver
@@ -853,8 +846,6 @@ class UrlGenerator implements UrlGeneratorContract
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the root controller namespace.
      *
      * @return string

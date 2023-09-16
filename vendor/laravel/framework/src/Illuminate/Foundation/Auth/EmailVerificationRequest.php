@@ -56,11 +56,7 @@ class EmailVerificationRequest extends FormRequest
      * Configure the validator instance.
      *
      * @param  \Illuminate\Validation\Validator  $validator
-<<<<<<< HEAD
      * @return \Illuminate\Validation\Validator
-=======
-     * @return void
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function withValidator(Validator $validator)
     {

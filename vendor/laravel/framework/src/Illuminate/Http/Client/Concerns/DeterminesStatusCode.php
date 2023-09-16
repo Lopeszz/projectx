@@ -66,7 +66,6 @@ trait DeterminesStatusCode
     }
 
     /**
-<<<<<<< HEAD
      * Determine if the response code was a 304 "Not Modified" response.
      *
      * @return bool
@@ -77,8 +76,6 @@ trait DeterminesStatusCode
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Determine if the response was a 400 "Bad Request" response.
      *
      * @return bool

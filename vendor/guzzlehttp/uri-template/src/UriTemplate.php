@@ -7,11 +7,7 @@ namespace GuzzleHttp\UriTemplate;
 /**
  * Expands URI templates. Userland implementation of PECL uri_template.
  *
-<<<<<<< HEAD
  * @see http://tools.ietf.org/html/rfc6570
-=======
- * @link http://tools.ietf.org/html/rfc6570
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  */
 final class UriTemplate
 {
@@ -174,10 +170,6 @@ final class UriTemplate
                     }
 
                     /** @var string $var */
-<<<<<<< HEAD
-=======
-
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     $kvp[$key] = $var;
                 }
 
@@ -214,11 +206,7 @@ final class UriTemplate
             }
 
             if ($actuallyUseQuery) {
-<<<<<<< HEAD
                 if ($expanded === '' && $joiner !== '&') {
-=======
-                if (!$expanded && $joiner !== '&') {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     $expanded = $value['value'];
                 } else {
                     $expanded = \sprintf('%s=%s', $value['value'], $expanded);

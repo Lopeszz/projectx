@@ -43,11 +43,7 @@ class Spinner extends Prompt
         $this->capturePreviousNewLines();
 
         if (! function_exists('pcntl_fork')) {
-<<<<<<< HEAD
             return $this->renderStatically($callback);
-=======
-            $this->renderStatically($callback);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         $this->hideCursor();
@@ -74,7 +70,6 @@ class Spinner extends Prompt
                 }
             } else {
                 $result = $callback();
-<<<<<<< HEAD
 
                 posix_kill($pid, SIGHUP);
                 pcntl_async_signals($originalAsync);
@@ -83,16 +78,6 @@ class Spinner extends Prompt
                 $this->eraseRenderedLines();
                 $this->showCursor();
 
-=======
-                posix_kill($pid, SIGHUP);
-                $lines = explode(PHP_EOL, $this->prevFrame);
-                $this->moveCursor(-999, -count($lines) + 1);
-                $this->eraseDown();
-                $this->showCursor();
-                pcntl_async_signals($originalAsync);
-                pcntl_signal(SIGINT, SIG_DFL);
-
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 return $result;
             }
         } catch (\Throwable $e) {
@@ -116,7 +101,6 @@ class Spinner extends Prompt
     {
         $this->static = true;
 
-<<<<<<< HEAD
         $this->hideCursor();
         $this->render();
 
@@ -126,11 +110,6 @@ class Spinner extends Prompt
         $this->showCursor();
 
         return $result;
-=======
-        $this->render();
-
-        return $callback();
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
@@ -150,7 +129,6 @@ class Spinner extends Prompt
     {
         return true;
     }
-<<<<<<< HEAD
 
     /**
      * Clear the lines rendered by the spinner.
@@ -161,6 +139,4 @@ class Spinner extends Prompt
         $this->moveCursor(-999, -count($lines) + 1);
         $this->eraseDown();
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

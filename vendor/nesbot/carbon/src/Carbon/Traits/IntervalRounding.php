@@ -40,11 +40,7 @@ trait IntervalRounding
         $unit = 'second';
 
         if ($precision instanceof DateInterval) {
-<<<<<<< HEAD
             $precision = (string) CarbonInterval::instance($precision, [], true);
-=======
-            $precision = (string) CarbonInterval::instance($precision);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         if (\is_string($precision) && preg_match('/^\s*(?<precision>\d+)?\s*(?<unit>\w+)(?<other>\W.*)?$/', $precision, $match)) {

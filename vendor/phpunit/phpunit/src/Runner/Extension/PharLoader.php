@@ -31,11 +31,8 @@ use Throwable;
 final class PharLoader
 {
     /**
-<<<<<<< HEAD
      * @psalm-param non-empty-string $directory
      *
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @psalm-return list<string>
      */
     public function loadPharExtensionsInDirectory(string $directory): array

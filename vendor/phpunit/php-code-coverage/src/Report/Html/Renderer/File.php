@@ -97,15 +97,10 @@ use function str_ends_with;
 use function str_replace;
 use function token_get_all;
 use function trim;
-<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\File as FileNode;
 use SebastianBergmann\CodeCoverage\Util\Percentage;
 use SebastianBergmann\Template\Exception;
-=======
-use SebastianBergmann\CodeCoverage\Node\File as FileNode;
-use SebastianBergmann\CodeCoverage\Util\Percentage;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use SebastianBergmann\Template\Template;
 
 /**
@@ -204,7 +199,6 @@ final class File extends Renderer
             ]
         );
 
-<<<<<<< HEAD
         try {
             $template->renderTo($file . '.html');
         } catch (Exception $e) {
@@ -214,9 +208,6 @@ final class File extends Renderer
                 $e
             );
         }
-=======
-        $template->renderTo($file . '.html');
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         if ($this->hasBranchCoverage) {
             $template->setVar(
@@ -228,7 +219,6 @@ final class File extends Renderer
                 ]
             );
 
-<<<<<<< HEAD
             try {
                 $template->renderTo($file . '_branch.html');
             } catch (Exception $e) {
@@ -238,9 +228,6 @@ final class File extends Renderer
                     $e
                 );
             }
-=======
-            $template->renderTo($file . '_branch.html');
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
             $template->setVar(
                 [
@@ -251,7 +238,6 @@ final class File extends Renderer
                 ]
             );
 
-<<<<<<< HEAD
             try {
                 $template->renderTo($file . '_path.html');
             } catch (Exception $e) {
@@ -261,9 +247,6 @@ final class File extends Renderer
                     $e
                 );
             }
-=======
-            $template->renderTo($file . '_path.html');
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
     }
 

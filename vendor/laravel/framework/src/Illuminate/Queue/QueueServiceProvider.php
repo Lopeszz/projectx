@@ -211,11 +211,7 @@ class QueueServiceProvider extends ServiceProvider implements DeferrableProvider
 
                 $app->forgetScopedInstances();
 
-<<<<<<< HEAD
                 Facade::clearResolvedInstances();
-=======
-                return Facade::clearResolvedInstances();
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             };
 
             return new Worker(

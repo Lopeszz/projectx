@@ -367,19 +367,11 @@ class CurlFactory implements CurlFactoryInterface
                     // If it's a directory or a link to a directory use CURLOPT_CAPATH.
                     // If not, it's probably a file, or a link to a file, so use CURLOPT_CAINFO.
                     if (
-<<<<<<< HEAD
                         \is_dir($options['verify'])
                         || (
                             \is_link($options['verify']) === true
                             && ($verifyLink = \readlink($options['verify'])) !== false
                             && \is_dir($verifyLink)
-=======
-                        \is_dir($options['verify']) ||
-                        (
-                            \is_link($options['verify']) === true &&
-                            ($verifyLink = \readlink($options['verify'])) !== false &&
-                            \is_dir($verifyLink)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                         )
                     ) {
                         $conf[\CURLOPT_CAPATH] = $options['verify'];
@@ -635,7 +627,6 @@ class CurlFactory implements CurlFactoryInterface
             return \strlen($h);
         };
     }
-<<<<<<< HEAD
 
     public function __destruct()
     {
@@ -644,6 +635,4 @@ class CurlFactory implements CurlFactoryInterface
             unset($this->handles[$id]);
         }
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

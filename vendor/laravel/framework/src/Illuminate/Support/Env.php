@@ -5,10 +5,7 @@ namespace Illuminate\Support;
 use Dotenv\Repository\Adapter\PutenvAdapter;
 use Dotenv\Repository\RepositoryBuilder;
 use PhpOption\Option;
-<<<<<<< HEAD
 use RuntimeException;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 class Env
 {
@@ -69,11 +66,7 @@ class Env
     }
 
     /**
-<<<<<<< HEAD
      * Get the value of an environment variable.
-=======
-     * Gets the value of an environment variable.
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @param  string  $key
      * @param  mixed  $default
@@ -81,7 +74,6 @@ class Env
      */
     public static function get($key, $default = null)
     {
-<<<<<<< HEAD
         return self::getOption($key)->getOrCall(fn () => value($default));
     }
 
@@ -106,8 +98,6 @@ class Env
      */
     protected static function getOption($key)
     {
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         return Option::fromValue(static::getRepository()->get($key))
             ->map(function ($value) {
                 switch (strtolower($value)) {
@@ -130,11 +120,6 @@ class Env
                 }
 
                 return $value;
-<<<<<<< HEAD
             });
-=======
-            })
-            ->getOrCall(fn () => value($default));
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 }

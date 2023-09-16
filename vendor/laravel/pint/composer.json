@@ -25,11 +25,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.21.1",
         "illuminate/view": "^10.5.1",
-<<<<<<< HEAD
         "laravel-zero/framework": "^10.1.2",
-=======
-        "laravel-zero/framework": "^10.1.1",
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "mockery/mockery": "^1.5.1",
         "nunomaduro/larastan": "^2.5.1",
         "nunomaduro/termwind": "^1.15.1",

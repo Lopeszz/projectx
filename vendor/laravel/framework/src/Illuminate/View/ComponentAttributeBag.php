@@ -11,16 +11,10 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use IteratorAggregate;
-<<<<<<< HEAD
 use JsonSerializable;
 use Traversable;
 
 class ComponentAttributeBag implements ArrayAccess, IteratorAggregate, JsonSerializable, Htmlable
-=======
-use Traversable;
-
-class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     use Conditionable, Macroable;
 
@@ -463,7 +457,6 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
     }
 
     /**
-<<<<<<< HEAD
      * Convert the object into a JSON serializable form.
      *
      * @return mixed
@@ -474,8 +467,6 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Implode the attributes into a single HTML ready string.
      *
      * @return string

@@ -88,13 +88,10 @@ use RuntimeException;
  * @method static static minute($minutes = 1) Alias for minutes().
  * @method static static seconds($seconds = 1) Create instance specifying a number of seconds for date interval or replace the interval by the given a number of seconds if called on an instance.
  * @method static static second($seconds = 1) Alias for seconds().
-<<<<<<< HEAD
  * @method static static milliseconds($milliseconds = 1) Create instance specifying a number of milliseconds for date interval or replace the interval by the given a number of milliseconds if called on an instance.
  * @method static static millisecond($milliseconds = 1) Alias for milliseconds().
  * @method static static microseconds($microseconds = 1) Create instance specifying a number of microseconds for date interval or replace the interval by the given a number of microseconds if called on an instance.
  * @method static static microsecond($microseconds = 1) Alias for microseconds().
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  * @method $this roundYear(float $precision = 1, string $function = "round") Round the current instance year with given precision using the given function.
  * @method $this roundYears(float $precision = 1, string $function = "round") Round the current instance year with given precision using the given function.
  * @method $this floorYear(float $precision = 1) Truncate the current instance year with given precision.
@@ -1816,13 +1813,10 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
             case 'minute':
             case 'seconds':
             case 'second':
-<<<<<<< HEAD
             case 'milliseconds':
             case 'millisecond':
             case 'microseconds':
             case 'microsecond':
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 return $this->setDateInterval((
                     // Override default P1D when instantiating via fluent setters.
                     [$this->isDefaultInterval ? new CarbonInterval('PT0S') : $this->dateInterval, $method]

@@ -53,13 +53,8 @@
     "require": {
         "php": "^7.2.5 || ^8.0",
         "ext-json": "*",
-<<<<<<< HEAD
         "guzzlehttp/promises": "^1.5.3 || ^2.0.1",
         "guzzlehttp/psr7": "^1.9.1 || ^2.5.1",
-=======
-        "guzzlehttp/promises": "^1.5.3 || ^2.0",
-        "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "psr/http-client": "^1.0",
         "symfony/deprecation-contracts": "^2.2 || ^3.0"
     },

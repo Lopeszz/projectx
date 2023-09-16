@@ -5,10 +5,6 @@ namespace Illuminate\View\Concerns;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
-<<<<<<< HEAD
-=======
-use Illuminate\Support\HtmlString;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Illuminate\View\ComponentSlot;
 
 trait ManagesComponents
@@ -118,11 +114,7 @@ trait ManagesComponents
      */
     protected function componentData()
     {
-<<<<<<< HEAD
         $defaultSlot = new ComponentSlot(trim(ob_get_clean()));
-=======
-        $defaultSlot = new HtmlString(trim(ob_get_clean()));
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         $slots = array_merge([
             '__default' => $defaultSlot,

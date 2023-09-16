@@ -50,7 +50,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-<<<<<<< HEAD
     | Token Prefix
     |--------------------------------------------------------------------------
     |
@@ -66,8 +65,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     | Sanctum Middleware
     |--------------------------------------------------------------------------
     |
@@ -78,14 +75,9 @@ return [
     */
 
     'middleware' => [
-<<<<<<< HEAD
         'authenticate_session' => Laravel\Sanctum\Http\Middleware\AuthenticateSession::class,
         'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class,
         'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
-=======
-        'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
-        'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class,
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     ],
 
 ];

@@ -393,11 +393,8 @@ class Cursor
      * Try to match a regular expression
      *
      * Returns the matching text and advances to the end of that match
-<<<<<<< HEAD
      *
      * @psalm-param non-empty-string $regex
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function match(string $regex): ?string
     {

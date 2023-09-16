@@ -140,7 +140,6 @@ trait ConditionallyLoadsAttributes
      *
      * @param  bool  $condition
      * @param  mixed  $value
-<<<<<<< HEAD
      * @param  mixed  $default
      * @return \Illuminate\Http\Resources\MergeValue|mixed
      */
@@ -151,13 +150,6 @@ trait ConditionallyLoadsAttributes
         }
 
         return func_num_args() === 3 ? new MergeValue(value($default)) : new MissingValue();
-=======
-     * @return \Illuminate\Http\Resources\MergeValue|mixed
-     */
-    protected function mergeWhen($condition, $value)
-    {
-        return $condition ? new MergeValue(value($value)) : new MissingValue;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
@@ -165,7 +157,6 @@ trait ConditionallyLoadsAttributes
      *
      * @param  bool  $condition
      * @param  mixed  $value
-<<<<<<< HEAD
      * @param  mixed  $default
      * @return \Illuminate\Http\Resources\MergeValue|mixed
      */
@@ -174,13 +165,6 @@ trait ConditionallyLoadsAttributes
         $arguments = func_num_args() === 2 ? [$value] : [$value, $default];
 
         return $this->mergeWhen(! $condition, ...$arguments);
-=======
-     * @return \Illuminate\Http\Resources\MergeValue|mixed
-     */
-    protected function mergeUnless($condition, $value)
-    {
-        return ! $condition ? new MergeValue(value($value)) : new MissingValue;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**

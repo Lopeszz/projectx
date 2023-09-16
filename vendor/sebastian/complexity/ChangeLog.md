@@ -2,15 +2,12 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
-<<<<<<< HEAD
 ## [3.0.1] - 2023-08-31
 
 ### Fixed
 
 * [#7](https://github.com/sebastianbergmann/complexity/pull/7): `ComplexityCalculatingVisitor` tries to process interface methods
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ## [3.0.0] - 2023-02-03
 
 ### Removed
@@ -39,10 +36,7 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * Initial release
 
-<<<<<<< HEAD
 [3.0.1]: https://github.com/sebastianbergmann/complexity/compare/3.0.0...3.0.1
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 [3.0.0]: https://github.com/sebastianbergmann/complexity/compare/2.0.2...3.0.0
 [2.0.2]: https://github.com/sebastianbergmann/complexity/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/sebastianbergmann/complexity/compare/2.0.0...2.0.1

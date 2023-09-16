@@ -72,7 +72,6 @@ class BusFake implements Fake, QueueingDispatcher
     protected $batches = [];
 
     /**
-<<<<<<< HEAD
      * Indicates if commands should be serialized and restored when pushed to the Bus.
      *
      * @var bool
@@ -80,8 +79,6 @@ class BusFake implements Fake, QueueingDispatcher
     protected bool $serializeAndRestore = false;
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create a new bus fake instance.
      *
      * @param  \Illuminate\Contracts\Bus\QueueingDispatcher  $dispatcher
@@ -595,11 +592,7 @@ class BusFake implements Fake, QueueingDispatcher
     public function dispatch($command)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
             $this->commands[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } else {
             return $this->dispatcher->dispatch($command);
         }
@@ -617,11 +610,7 @@ class BusFake implements Fake, QueueingDispatcher
     public function dispatchSync($command, $handler = null)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
             $this->commandsSync[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commandsSync[get_class($command)][] = $command;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } else {
             return $this->dispatcher->dispatchSync($command, $handler);
         }
@@ -637,11 +626,7 @@ class BusFake implements Fake, QueueingDispatcher
     public function dispatchNow($command, $handler = null)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
             $this->commands[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } else {
             return $this->dispatcher->dispatchNow($command, $handler);
         }
@@ -656,11 +641,7 @@ class BusFake implements Fake, QueueingDispatcher
     public function dispatchToQueue($command)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
             $this->commands[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } else {
             return $this->dispatcher->dispatchToQueue($command);
         }
@@ -675,11 +656,7 @@ class BusFake implements Fake, QueueingDispatcher
     public function dispatchAfterResponse($command)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
             $this->commandsAfterResponse[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commandsAfterResponse[get_class($command)][] = $command;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } else {
             return $this->dispatcher->dispatch($command);
         }
@@ -785,7 +762,6 @@ class BusFake implements Fake, QueueingDispatcher
     }
 
     /**
-<<<<<<< HEAD
      * Specify if commands should be serialized and restored when being batched.
      *
      * @param  bool  $serializeAndRestore
@@ -821,8 +797,6 @@ class BusFake implements Fake, QueueingDispatcher
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Set the pipes commands should be piped through before dispatching.
      *
      * @param  array  $pipes

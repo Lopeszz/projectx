@@ -69,13 +69,8 @@ final class AnyOf implements Schema
 
 	public function merge($value, $base)
 	{
-<<<<<<< HEAD
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
-=======
-		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
-			unset($value[Helpers::PREVENT_MERGING]);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			return $value;
 		}
 
@@ -117,11 +112,7 @@ final class AnyOf implements Schema
 		} else {
 			$context->addError(
 				'The %label% %path% expects to be %expected%, %value% given.',
-<<<<<<< HEAD
 				Nette\Schema\Message::TypeMismatch,
-=======
-				Nette\Schema\Message::TYPE_MISMATCH,
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 				[
 					'value' => $value,
 					'expected' => implode('|', array_unique($expecteds)),
@@ -136,11 +127,7 @@ final class AnyOf implements Schema
 		if ($this->required) {
 			$context->addError(
 				'The mandatory item %path% is missing.',
-<<<<<<< HEAD
 				Nette\Schema\Message::MissingItem
-=======
-				Nette\Schema\Message::MISSING_ITEM
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			);
 			return null;
 		}

@@ -5,13 +5,10 @@ namespace Laravel\Sanctum\Exceptions;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Arr;
 
-<<<<<<< HEAD
 /**
  * @deprecated
  * @see \Laravel\Sanctum\Exceptions\MissingAbilityException
  */
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 class MissingScopeException extends AuthorizationException
 {
     /**

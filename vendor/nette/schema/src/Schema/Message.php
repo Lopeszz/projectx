@@ -17,7 +17,6 @@ final class Message
 	use Nette\SmartObject;
 
 	/** variables: {value: mixed, expected: string} */
-<<<<<<< HEAD
 	public const TypeMismatch = 'schema.typeMismatch';
 
 	/** variables: {value: mixed, expected: string} */
@@ -50,30 +49,6 @@ final class Message
 	public const MISSING_ITEM = self::MissingItem;
 	public const UNEXPECTED_ITEM = self::UnexpectedItem;
 	public const DEPRECATED = self::Deprecated;
-=======
-	public const TYPE_MISMATCH = 'schema.typeMismatch';
-
-	/** variables: {value: mixed, expected: string} */
-	public const VALUE_OUT_OF_RANGE = 'schema.valueOutOfRange';
-
-	/** variables: {value: mixed, length: int, expected: string} */
-	public const LENGTH_OUT_OF_RANGE = 'schema.lengthOutOfRange';
-
-	/** variables: {value: string, pattern: string} */
-	public const PATTERN_MISMATCH = 'schema.patternMismatch';
-
-	/** variables: {value: mixed, assertion: string} */
-	public const FAILED_ASSERTION = 'schema.failedAssertion';
-
-	/** no variables */
-	public const MISSING_ITEM = 'schema.missingItem';
-
-	/** variables: {hint: string} */
-	public const UNEXPECTED_ITEM = 'schema.unexpectedItem';
-
-	/** no variables */
-	public const DEPRECATED = 'schema.deprecated';
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 	/** @var string */
 	public $message;

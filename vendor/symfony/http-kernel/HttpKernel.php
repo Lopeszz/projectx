@@ -15,10 +15,7 @@ use Symfony\Component\HttpFoundation\Exception\RequestExceptionInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\StreamedResponse;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
 use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
@@ -74,14 +71,9 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
         $request->headers->set('X-Php-Ob-Level', (string) ob_get_level());
 
         $this->requestStack->push($request);
-<<<<<<< HEAD
         $response = null;
         try {
             return $response = $this->handleRaw($request, $type);
-=======
-        try {
-            return $this->handleRaw($request, $type);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } catch (\Throwable $e) {
             if ($e instanceof \Error && !$this->handleAllThrowables) {
                 throw $e;
@@ -96,7 +88,6 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
                 throw $e;
             }
 
-<<<<<<< HEAD
             return $response = $this->handleThrowable($e, $request, $type);
         } finally {
             $this->requestStack->pop();
@@ -114,11 +105,6 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
                     }
                 });
             }
-=======
-            return $this->handleThrowable($e, $request, $type);
-        } finally {
-            $this->requestStack->pop();
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
     }
 

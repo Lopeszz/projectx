@@ -61,11 +61,7 @@ class FreshCommand extends Command
 
         if ($this->laravel->bound(Dispatcher::class)) {
             $this->laravel[Dispatcher::class]->dispatch(
-<<<<<<< HEAD
                 new DatabaseRefreshed($database, $this->needsSeeding())
-=======
-                new DatabaseRefreshed
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 

@@ -657,7 +657,6 @@ class Stringable implements JsonSerializable, ArrayAccess
     }
 
     /**
-<<<<<<< HEAD
      * Replace the first occurrence of the given value if it appears at the start of the string.
      *
      * @param  string  $search
@@ -670,8 +669,6 @@ class Stringable implements JsonSerializable, ArrayAccess
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Replace the last occurrence of a given value in the string.
      *
      * @param  string  $search
@@ -684,7 +681,6 @@ class Stringable implements JsonSerializable, ArrayAccess
     }
 
     /**
-<<<<<<< HEAD
      * Replace the last occurrence of a given value if it appears at the end of the string.
      *
      * @param  string  $search
@@ -697,8 +693,6 @@ class Stringable implements JsonSerializable, ArrayAccess
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Replace the patterns matching the given regular expression.
      *
      * @param  string  $pattern
@@ -1144,7 +1138,6 @@ class Stringable implements JsonSerializable, ArrayAccess
     }
 
     /**
-<<<<<<< HEAD
      * Wrap a string to a given number of characters.
      *
      * @param  int  $characters
@@ -1158,8 +1151,6 @@ class Stringable implements JsonSerializable, ArrayAccess
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Wrap the string with the given strings.
      *
      * @param  string  $before

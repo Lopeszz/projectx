@@ -13,11 +13,8 @@ namespace Symfony\Component\Console\Formatter;
 
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 
-<<<<<<< HEAD
 use function Symfony\Component\String\b;
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 /**
  * Formatter class for console output.
  *
@@ -246,11 +243,7 @@ class OutputFormatter implements WrappableOutputFormatterInterface
         }
 
         preg_match('~(\\n)$~', $text, $matches);
-<<<<<<< HEAD
         $text = $prefix.$this->addLineBreaks($text, $width);
-=======
-        $text = $prefix.preg_replace('~([^\\n]{'.$width.'})\\ *~', "\$1\n", $text);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $text = rtrim($text, "\n").($matches[1] ?? '');
 
         if (!$currentLineLength && '' !== $current && !str_ends_with($current, "\n")) {
@@ -274,7 +267,6 @@ class OutputFormatter implements WrappableOutputFormatterInterface
 
         return implode("\n", $lines);
     }
-<<<<<<< HEAD
 
     private function addLineBreaks(string $text, int $width): string
     {
@@ -282,6 +274,4 @@ class OutputFormatter implements WrappableOutputFormatterInterface
 
         return b($text)->toCodePointString($encoding)->wordwrap($width, "\n", true)->toByteString($encoding);
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

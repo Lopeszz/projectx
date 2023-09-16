@@ -1786,7 +1786,6 @@ class Blueprint
     }
 
     /**
-<<<<<<< HEAD
      * Get the table prefix.
      *
      * @return string
@@ -1797,8 +1796,6 @@ class Blueprint
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the columns on the blueprint.
      *
      * @return \Illuminate\Database\Schema\ColumnDefinition[]

@@ -45,10 +45,7 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static bool hasDispatchedAfterResponse(string $command)
  * @method static \Illuminate\Bus\Batch dispatchFakeBatch(string $name = '')
  * @method static \Illuminate\Bus\Batch recordPendingBatch(\Illuminate\Bus\PendingBatch $pendingBatch)
-<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\BusFake serializeAndRestore(bool $serializeAndRestore = true)
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  *
  * @see \Illuminate\Bus\Dispatcher
  * @see \Illuminate\Support\Testing\Fakes\BusFake

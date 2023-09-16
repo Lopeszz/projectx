@@ -33,7 +33,6 @@ trait InteractsWithDockerComposeServices
     protected $defaultServices = ['mysql', 'redis', 'selenium', 'mailpit'];
 
     /**
-<<<<<<< HEAD
      * Gather the desired Sail services using an interactive prompt.
      *
      * @return array
@@ -48,14 +47,6 @@ trait InteractsWithDockerComposeServices
             );
         }
 
-=======
-     * Gather the desired Sail services using a Symfony menu.
-     *
-     * @return array
-     */
-    protected function gatherServicesWithSymfonyMenu()
-    {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         return $this->choice('Which services would you like to install?', $this->services, 0, null, true);
     }
 
@@ -149,10 +140,7 @@ trait InteractsWithDockerComposeServices
         if (in_array('meilisearch', $services)) {
             $environment .= "\nSCOUT_DRIVER=meilisearch";
             $environment .= "\nMEILISEARCH_HOST=http://meilisearch:7700\n";
-<<<<<<< HEAD
             $environment .= "\nMEILISEARCH_NO_ANALYTICS=false\n";
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         if (in_array('soketi', $services)) {

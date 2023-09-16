@@ -14,10 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\RecordsNotFoundException;
-<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -558,11 +555,7 @@ class Builder implements BuilderContract
     }
 
     /**
-<<<<<<< HEAD
      * Get the first record matching the attributes. If the record is not found, create it.
-=======
-     * Get the first record matching the attributes or create it.
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @param  array  $attributes
      * @param  array  $values
@@ -574,7 +567,6 @@ class Builder implements BuilderContract
             return $instance;
         }
 
-<<<<<<< HEAD
         return $this->createOrFirst($attributes, $values);
     }
 
@@ -592,11 +584,6 @@ class Builder implements BuilderContract
         } catch (UniqueConstraintViolationException $e) {
             return $this->useWritePdo()->where($attributes)->first() ?? throw $e;
         }
-=======
-        return tap($this->newModelInstance(array_merge($attributes, $values)), function ($instance) {
-            $instance->save();
-        });
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
@@ -608,15 +595,10 @@ class Builder implements BuilderContract
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
-<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values)->save();
             }
-=======
-        return tap($this->firstOrNew($attributes), function ($instance) use ($values) {
-            $instance->fill($values)->save();
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         });
     }
 
@@ -1174,7 +1156,6 @@ class Builder implements BuilderContract
 
         $column = $this->model->getUpdatedAtColumn();
 
-<<<<<<< HEAD
         if (! array_key_exists($column, $values)) {
             $timestamp = $this->model->freshTimestampString();
 
@@ -1190,12 +1171,6 @@ class Builder implements BuilderContract
 
             $values = array_merge([$column => $timestamp], $values);
         }
-=======
-        $values = array_merge(
-            [$column => $this->model->freshTimestampString()],
-            $values
-        );
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         $segments = preg_split('/\s+as\s+/i', $this->query->from);
 
@@ -1737,7 +1712,6 @@ class Builder implements BuilderContract
     }
 
     /**
-<<<<<<< HEAD
      * Execute the given Closure within a transaction savepoint if needed.
      *
      * @template TModelValue
@@ -1753,8 +1727,6 @@ class Builder implements BuilderContract
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the underlying query builder instance.
      *
      * @return \Illuminate\Database\Query\Builder

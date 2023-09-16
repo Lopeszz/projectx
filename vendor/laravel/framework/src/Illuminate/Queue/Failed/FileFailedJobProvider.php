@@ -6,11 +6,7 @@ use Closure;
 use DateTimeInterface;
 use Illuminate\Support\Facades\Date;
 
-<<<<<<< HEAD
 class FileFailedJobProvider implements CountableFailedJobProvider, FailedJobProviderInterface, PrunableFailedJobProvider
-=======
-class FileFailedJobProvider implements FailedJobProviderInterface, PrunableFailedJobProvider
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     /**
      * The file path where the failed job file should be stored.
@@ -206,7 +202,6 @@ class FileFailedJobProvider implements FailedJobProviderInterface, PrunableFaile
             json_encode($jobs, JSON_PRETTY_PRINT)
         );
     }
-<<<<<<< HEAD
 
     /**
      * Count the failed jobs.
@@ -225,6 +220,4 @@ class FileFailedJobProvider implements FailedJobProviderInterface, PrunableFaile
             ->filter(fn ($job) => $job->connection === ($connection ?? $job->connection) && $job->queue === ($queue ?? $job->queue))
             ->count();
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

@@ -17,15 +17,6 @@ use Exception;
  */
 final class ExceptionComparator extends ObjectComparator
 {
-<<<<<<< HEAD
-=======
-    /**
-     * Returns whether the comparator can compare two values.
-     *
-     * @param mixed $expected The first value to compare
-     * @param mixed $actual   The second value to compare
-     */
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function accepts(mixed $expected, mixed $actual): bool
     {
         return $expected instanceof Exception && $actual instanceof Exception;

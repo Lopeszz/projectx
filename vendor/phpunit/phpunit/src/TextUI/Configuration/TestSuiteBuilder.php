@@ -70,11 +70,7 @@ final class TestSuiteBuilder
 
     /**
      * @psalm-param non-empty-string $path
-<<<<<<< HEAD
      * @psalm-param list<non-empty-string> $suffixes
-=======
-     * @psalm-param list<string> $suffixes
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @throws \PHPUnit\Framework\Exception
      */

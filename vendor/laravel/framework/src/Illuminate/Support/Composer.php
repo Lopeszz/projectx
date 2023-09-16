@@ -2,14 +2,10 @@
 
 namespace Illuminate\Support;
 
-<<<<<<< HEAD
 use Closure;
 use Illuminate\Filesystem\Filesystem;
 use RuntimeException;
 use Symfony\Component\Console\Output\OutputInterface;
-=======
-use Illuminate\Filesystem\Filesystem;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
 
@@ -43,7 +39,6 @@ class Composer
     }
 
     /**
-<<<<<<< HEAD
      * Determine if the given Composer package is installed.
      *
      * @param  string  $package
@@ -139,8 +134,6 @@ class Composer
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Regenerate the Composer autoloader files.
      *
      * @param  string|array  $extra
@@ -166,11 +159,7 @@ class Composer
     }
 
     /**
-<<<<<<< HEAD
      * Get the Composer binary / command for the environment.
-=======
-     * Get the composer command for the environment.
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @return array
      */
@@ -184,7 +173,6 @@ class Composer
     }
 
     /**
-<<<<<<< HEAD
      * Get the path to the "composer.json" file.
      *
      * @return string
@@ -203,8 +191,6 @@ class Composer
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the PHP binary.
      *
      * @return string
@@ -218,20 +204,12 @@ class Composer
      * Get a new Symfony process instance.
      *
      * @param  array  $command
-<<<<<<< HEAD
      * @param  array  $env
      * @return \Symfony\Component\Process\Process
      */
     protected function getProcess(array $command, array $env = [])
     {
         return (new Process($command, $this->workingPath, $env))->setTimeout(null);
-=======
-     * @return \Symfony\Component\Process\Process
-     */
-    protected function getProcess(array $command)
-    {
-        return (new Process($command, $this->workingPath))->setTimeout(null);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**

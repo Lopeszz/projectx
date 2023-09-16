@@ -253,7 +253,6 @@ class Mailer implements MailerContract, MailQueueContract
 
         $data['message'] = $this->createMessage();
 
-<<<<<<< HEAD
         return $this->replaceEmbeddedAttachments(
             $this->renderView($view ?: $plain, $data),
             $data['message']->getSymfonyMessage()->getAttachments()
@@ -286,9 +285,6 @@ class Mailer implements MailerContract, MailQueueContract
         }
 
         return $renderedView;
-=======
-        return $this->renderView($view ?: $plain, $data);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**

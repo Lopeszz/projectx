@@ -74,11 +74,7 @@ class UploadedFile extends File
      * Returns the original file name.
      *
      * It is extracted from the request from which the file has been uploaded.
-<<<<<<< HEAD
      * This should not be considered as a safe value to use for a file name on your servers.
-=======
-     * Then it should not be considered as a safe value.
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function getClientOriginalName(): string
     {
@@ -89,11 +85,7 @@ class UploadedFile extends File
      * Returns the original file extension.
      *
      * It is extracted from the original file name that was uploaded.
-<<<<<<< HEAD
      * This should not be considered as a safe value to use for a file name on your servers.
-=======
-     * Then it should not be considered as a safe value.
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function getClientOriginalExtension(): string
     {

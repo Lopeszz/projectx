@@ -2,10 +2,7 @@
 
 namespace Laravel\Prompts;
 
-<<<<<<< HEAD
 use RuntimeException;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Symfony\Component\Console\Terminal as SymfonyTerminal;
 
 class Terminal
@@ -40,15 +37,9 @@ class Terminal
      */
     public function setTty(string $mode): void
     {
-<<<<<<< HEAD
         $this->initialTtyMode ??= $this->exec('stty -g');
 
         $this->exec("stty $mode");
-=======
-        $this->initialTtyMode ??= (shell_exec('stty -g') ?: null);
-
-        shell_exec("stty $mode");
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
@@ -57,11 +48,7 @@ class Terminal
     public function restoreTty(): void
     {
         if ($this->initialTtyMode) {
-<<<<<<< HEAD
             $this->exec("stty {$this->initialTtyMode}");
-=======
-            shell_exec("stty {$this->initialTtyMode}");
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
             $this->initialTtyMode = null;
         }
@@ -90,7 +77,6 @@ class Terminal
     {
         exit(1);
     }
-<<<<<<< HEAD
 
     /**
      * Execute the given command and return the output.
@@ -116,6 +102,4 @@ class Terminal
 
         return $stdout;
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

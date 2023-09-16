@@ -98,11 +98,8 @@ final class RegexHelper
     /**
      * Attempt to match a regex in string s at offset offset
      *
-<<<<<<< HEAD
      * @psalm-param non-empty-string $regex
      *
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return int|null Index of match, or null
      *
      * @psalm-pure
@@ -124,11 +121,8 @@ final class RegexHelper
     /**
      * Functional wrapper around preg_match_all which only returns the first set of matches
      *
-<<<<<<< HEAD
      * @psalm-param non-empty-string $pattern
      *
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return string[]|null
      *
      * @psalm-pure
@@ -172,11 +166,8 @@ final class RegexHelper
      *
      * @phpstan-param HtmlBlock::TYPE_* $type
      *
-<<<<<<< HEAD
      * @psalm-return non-empty-string
      *
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @throws InvalidArgumentException if an invalid type is given
      *
      * @psalm-pure
@@ -212,11 +203,8 @@ final class RegexHelper
      *
      * @phpstan-param HtmlBlock::TYPE_* $type
      *
-<<<<<<< HEAD
      * @psalm-return non-empty-string
      *
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @throws InvalidArgumentException if an invalid type is given
      *
      * @psalm-pure

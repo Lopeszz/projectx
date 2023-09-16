@@ -328,11 +328,7 @@ class Process implements \IteratorAggregate
 
             // See https://unix.stackexchange.com/questions/71205/background-process-pipe-input
             $commandline = '{ ('.$commandline.') <&3 3<&- 3>/dev/null & } 3<&0;';
-<<<<<<< HEAD
             $commandline .= 'pid=$!; echo $pid >&3; wait $pid 2>/dev/null; code=$?; echo $code >&3; exit $code';
-=======
-            $commandline .= 'pid=$!; echo $pid >&3; wait $pid; code=$?; echo $code >&3; exit $code';
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
             // Workaround for the bug, when PTS functionality is enabled.
             // @see : https://bugs.php.net/69442

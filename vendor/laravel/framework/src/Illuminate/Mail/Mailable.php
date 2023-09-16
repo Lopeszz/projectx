@@ -1204,11 +1204,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertFrom($address, $name = null)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1228,11 +1225,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertTo($address, $name = null)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1264,11 +1258,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasCc($address, $name = null)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1288,11 +1279,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasBcc($address, $name = null)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1312,11 +1300,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasReplyTo($address, $name = null)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $replyTo = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1568,11 +1553,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasTag($tag)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         PHPUnit::assertTrue(
             $this->hasTag($tag),
             "Did not see expected tag [{$tag}] in email tags."
@@ -1590,11 +1572,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasMetadata($key, $value)
     {
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         PHPUnit::assertTrue(
             $this->hasMetadata($key, $value),
             "Did not see expected key [{$key}] and value [{$value}] in email metadata."

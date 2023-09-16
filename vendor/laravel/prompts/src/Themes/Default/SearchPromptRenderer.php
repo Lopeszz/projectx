@@ -3,14 +3,9 @@
 namespace Laravel\Prompts\Themes\Default;
 
 use Laravel\Prompts\SearchPrompt;
-<<<<<<< HEAD
 use Laravel\Prompts\Themes\Contracts\Scrolling;
 
 class SearchPromptRenderer extends Renderer implements Scrolling
-=======
-
-class SearchPromptRenderer extends Renderer
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     use Concerns\DrawsBoxes;
     use Concerns\DrawsScrollbars;
@@ -51,12 +46,8 @@ class SearchPromptRenderer extends Renderer
                     $this->cyan($this->truncate($prompt->label, $prompt->terminal()->cols() - 6)),
                     $this->valueWithCursorAndSearchIcon($prompt, $maxWidth),
                     $this->renderOptions($prompt),
-<<<<<<< HEAD
                 )
                 ->hint($prompt->hint),
-=======
-                ),
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
             default => $this
                 ->box(
@@ -64,17 +55,12 @@ class SearchPromptRenderer extends Renderer
                     $prompt->valueWithCursor($maxWidth),
                     $this->renderOptions($prompt),
                 )
-<<<<<<< HEAD
                 ->when(
                     $prompt->hint,
                     fn () => $this->hint($prompt->hint),
                     fn () => $this->newLine() // Space for errors
                 )
                 ->spaceForDropdown($prompt)
-=======
-                ->spaceForDropdown($prompt)
-                ->newLine(), // Space for errors
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         };
     }
 
@@ -120,7 +106,6 @@ class SearchPromptRenderer extends Renderer
             return $this->gray('  '.($prompt->state === 'searching' ? 'Searching...' : 'No results.'));
         }
 
-<<<<<<< HEAD
         return $this->scrollbar(
             collect($prompt->visible())
                 ->map(fn ($label) => $this->truncate($label, $prompt->terminal()->cols() - 10))
@@ -146,19 +131,4 @@ class SearchPromptRenderer extends Renderer
     {
         return 7;
     }
-=======
-        return $this->scroll(
-            collect($prompt->matches())
-                ->values()
-                ->map(fn ($label) => $this->truncate($label, $prompt->terminal()->cols() - 10))
-                ->map(fn ($label, $i) => $prompt->highlighted === $i
-                    ? "{$this->cyan('›')} {$label}  "
-                    : "  {$this->dim($label)}  "
-                ),
-            $prompt->highlighted,
-            min($prompt->scroll, $prompt->terminal()->lines() - 7),
-            min($this->longest($prompt->matches(), padding: 4), $prompt->terminal()->cols() - 6)
-        )->implode(PHP_EOL);
-    }
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

@@ -21,11 +21,7 @@ final class ComplexityCollection implements Countable, IteratorAggregate
     /**
      * @psalm-var list<Complexity>
      */
-<<<<<<< HEAD
     private readonly array $items;
-=======
-    private array $items;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     public static function fromList(Complexity ...$items): self
     {
@@ -53,12 +49,9 @@ final class ComplexityCollection implements Countable, IteratorAggregate
         return new ComplexityCollectionIterator($this);
     }
 
-<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function count(): int
     {
         return count($this->items);
@@ -69,12 +62,9 @@ final class ComplexityCollection implements Countable, IteratorAggregate
         return empty($this->items);
     }
 
-<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function cyclomaticComplexity(): int
     {
         $cyclomaticComplexity = 0;

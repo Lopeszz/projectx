@@ -2,15 +2,12 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
-<<<<<<< HEAD
 ## [5.0.1] - 2023-09-08
 
 ### Fixed
 
 * [#49](https://github.com/sebastianbergmann/exporter/issues/49): `Exporter::toArray()` changes `SplObjectStorage` index
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ## [5.0.0] - 2023-02-03
 
 ### Changed
@@ -85,10 +82,7 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * Remove HHVM-specific code that is no longer needed
 
-<<<<<<< HEAD
 [5.0.1]: https://github.com/sebastianbergmann/exporter/compare/5.0.0...5.0.1
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 [5.0.0]: https://github.com/sebastianbergmann/exporter/compare/4.0.5...5.0.0
 [4.0.5]: https://github.com/sebastianbergmann/exporter/compare/4.0.4...4.0.5
 [4.0.4]: https://github.com/sebastianbergmann/exporter/compare/4.0.3...4.0.4

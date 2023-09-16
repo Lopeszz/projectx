@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
-<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 abstract class HasOneOrMany extends Relation
 {
@@ -230,11 +227,7 @@ abstract class HasOneOrMany extends Relation
     }
 
     /**
-<<<<<<< HEAD
      * Get the first record matching the attributes. If the record is not found, create it.
-=======
-     * Get the first related record matching the attributes or create it.
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @param  array  $attributes
      * @param  array  $values
@@ -243,18 +236,13 @@ abstract class HasOneOrMany extends Relation
     public function firstOrCreate(array $attributes = [], array $values = [])
     {
         if (is_null($instance = $this->where($attributes)->first())) {
-<<<<<<< HEAD
             $instance = $this->createOrFirst($attributes, $values);
-=======
-            $instance = $this->create(array_merge($attributes, $values));
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         return $instance;
     }
 
     /**
-<<<<<<< HEAD
      * Attempt to create the record. If a unique constraint violation occurs, attempt to find the matching record.
      *
      * @param  array  $attributes
@@ -271,8 +259,6 @@ abstract class HasOneOrMany extends Relation
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create or update a related record matching the attributes, and fill it with values.
      *
      * @param  array  $attributes
@@ -281,17 +267,10 @@ abstract class HasOneOrMany extends Relation
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
-<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values)->save();
             }
-=======
-        return tap($this->firstOrNew($attributes), function ($instance) use ($values) {
-            $instance->fill($values);
-
-            $instance->save();
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         });
     }
 

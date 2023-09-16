@@ -38,11 +38,7 @@ class InstallCommand extends Command
         } elseif ($this->option('no-interaction')) {
             $services = $this->defaultServices;
         } else {
-<<<<<<< HEAD
             $services = $this->gatherServicesInteractively();
-=======
-            $services = $this->gatherServicesWithSymfonyMenu();
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         if ($invalidServices = array_diff($services, $this->services)) {

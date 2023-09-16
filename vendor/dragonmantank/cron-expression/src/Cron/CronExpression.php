@@ -177,10 +177,7 @@ class CronExpression
      *
      * @param string $expression CRON expression (e.g. '8 * * * *')
      * @param null|FieldFactoryInterface $fieldFactory Factory to create cron fields
-<<<<<<< HEAD
      * @throws InvalidArgumentException
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function __construct(string $expression, FieldFactoryInterface $fieldFactory = null)
     {
@@ -205,7 +202,6 @@ class CronExpression
         $split = preg_split('/\s/', $value, -1, PREG_SPLIT_NO_EMPTY);
         Assert::isArray($split);
 
-<<<<<<< HEAD
         $notEnoughParts = \count($split) < 5;
 
         $questionMarkInInvalidPart = array_key_exists(0, $split) && $split[0] === '?'
@@ -216,19 +212,12 @@ class CronExpression
             && array_key_exists(4, $split) && $split[4] === '?';
 
         if ($notEnoughParts || $questionMarkInInvalidPart || $tooManyQuestionMarks) {
-=======
-        $this->cronParts = $split;
-        if (\count($this->cronParts) < 5) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             throw new InvalidArgumentException(
                 $value . ' is not a valid CRON expression'
             );
         }
 
-<<<<<<< HEAD
         $this->cronParts = $split;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         foreach ($this->cronParts as $position => $part) {
             $this->setPart($position, $part);
         }

@@ -1,6 +1,5 @@
 # Release Notes for 10.x
 
-<<<<<<< HEAD
 ## [Unreleased](https://github.com/laravel/framework/compare/v10.23.0...10.x)
 
 ## [v10.23.0](https://github.com/laravel/framework/compare/v10.22.0...v10.23.0) - 2023-09-12
@@ -164,19 +163,6 @@
 - [10.x] Retain `$request->request` `InputBag` type by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/framework/pull/47838
 
 ## [v10.16.0](https://github.com/laravel/framework/compare/v10.15.0...v10.16.0) - 2023-07-25
-=======
-## [Unreleased](https://github.com/laravel/framework/compare/v9.52.14...10.x)
-
-## [v9.52.14](https://github.com/laravel/framework/compare/v10.16.0...v9.52.14) - 2023-08-02
-
-### What's Changed
-
-- [9.x] Circumvent PHP 8.2.9 date format bug that makes artisan serve crash by [@levu42](https://github.com/levu42) in https://github.com/laravel/framework/pull/47931
-
-**Full Changelog**: https://github.com/laravel/framework/compare/v9.52.13...v9.52.14
-
-## [v10.16.0](https://github.com/laravel/framework/compare/v9.52.11...v10.16.0) - 2023-07-25
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 - [10.x] Improve display of sub-minute tasks in `schedule:list` command. by [@jessarcher](https://github.com/jessarcher) in https://github.com/laravel/framework/pull/47720
 - [10.x] Add new SQL error message "No connection could be made because the target machine actively refused it" by [@magnusvin](https://github.com/magnusvin) in https://github.com/laravel/framework/pull/47718
@@ -202,14 +188,6 @@
 - [10.x] Allowing bind of IPv6 addresses in development server by [@MuriloChianfa](https://github.com/MuriloChianfa) in https://github.com/laravel/framework/pull/47804
 - [10.x] Add more info to issue template by [@driesvints](https://github.com/driesvints) in https://github.com/laravel/framework/pull/47828
 
-<<<<<<< HEAD
-=======
-## [v9.52.11](https://github.com/laravel/framework/compare/v10.15.0...v9.52.11) - 2023-07-25
-
-- [9.x] Fix CI for DynamoDB by [@GrahamCampbell](https://github.com/GrahamCampbell) in https://github.com/laravel/framework/pull/47656
-- [9.x] Pin `amazon/dynamodb-local` version in `docker-compose.yml` by [@GrahamCampbell](https://github.com/GrahamCampbell) in https://github.com/laravel/framework/pull/47657
-
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ## [v10.15.0](https://github.com/laravel/framework/compare/v10.14.1...v10.15.0) - 2023-07-11
 
 - [10.x] Change return type of `getPrivateToken` in AblyBroadcaster by [@milwad](https://github.com/milwad)-dev in https://github.com/laravel/framework/pull/47602

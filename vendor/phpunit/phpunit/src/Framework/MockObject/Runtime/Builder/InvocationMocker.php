@@ -17,10 +17,7 @@ use function count;
 use function is_string;
 use function strtolower;
 use PHPUnit\Framework\Constraint\Constraint;
-<<<<<<< HEAD
 use PHPUnit\Framework\InvalidArgumentException;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use PHPUnit\Framework\MockObject\ConfigurableMethod;
 use PHPUnit\Framework\MockObject\IncompatibleReturnValueException;
 use PHPUnit\Framework\MockObject\InvocationHandler;
@@ -146,13 +143,6 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
         return $this->will($stub);
     }
 
-<<<<<<< HEAD
-=======
-    /**
-     * @deprecated Use <code>$double->willReturn(1, 2, 3)</code> instead of <code>$double->willReturnOnConsecutiveCalls(1, 2, 3)</code>
-     * @see https://github.com/sebastianbergmann/phpunit/issues/5425
-     */
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function willReturnOnConsecutiveCalls(mixed ...$values): self
     {
         $stub = new ConsecutiveCalls($values);
@@ -209,11 +199,7 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
     }
 
     /**
-<<<<<<< HEAD
      * @throws InvalidArgumentException
-=======
-     * @throws \PHPUnit\Framework\InvalidArgumentException
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @throws MethodCannotBeConfiguredException
      * @throws MethodNameAlreadyConfiguredException
      *
@@ -226,19 +212,12 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
         }
 
         if (is_string($constraint)) {
-<<<<<<< HEAD
             $this->configurableMethodNames ??= array_flip(
                 array_map(
                     static fn (ConfigurableMethod $configurable) => strtolower($configurable->name()),
                     $this->configurableMethods,
                 ),
             );
-=======
-            $this->configurableMethodNames ??= array_flip(array_map(
-                static fn (ConfigurableMethod $configurable) => strtolower($configurable->name()),
-                $this->configurableMethods,
-            ));
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
             if (!array_key_exists(strtolower($constraint), $this->configurableMethodNames)) {
                 throw new MethodCannotBeConfiguredException($constraint);

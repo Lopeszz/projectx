@@ -52,10 +52,7 @@ class EnsureFrontendRequestsAreStateful
             \Illuminate\Session\Middleware\StartSession::class,
             config('sanctum.middleware.validate_csrf_token'),
             config('sanctum.middleware.verify_csrf_token', \Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class),
-<<<<<<< HEAD
             config('sanctum.middleware.authenticate_session'),
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ])));
 
         array_unshift($middleware, function ($request, $next) {

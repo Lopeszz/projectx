@@ -121,11 +121,7 @@ class CompiledRouteCollection extends AbstractRouteCollection
             if ($result = $matcher->matchRequest($trimmedRequest)) {
                 $route = $this->getByName($result['_route']);
             }
-<<<<<<< HEAD
         } catch (ResourceNotFoundException|MethodNotAllowedException) {
-=======
-        } catch (ResourceNotFoundException|MethodNotAllowedException $e) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             try {
                 return $this->routes->match($request);
             } catch (NotFoundHttpException) {

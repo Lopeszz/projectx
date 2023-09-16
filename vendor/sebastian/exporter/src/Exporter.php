@@ -34,20 +34,6 @@ use SebastianBergmann\RecursionContext\Context;
 use SplObjectStorage;
 use UnitEnum;
 
-<<<<<<< HEAD
-=======
-/**
- * A nifty utility for visualizing PHP variables.
- *
- * <code>
- * <?php
- * use SebastianBergmann\Exporter\Exporter;
- *
- * $exporter = new Exporter;
- * print $exporter->export(new Exception);
- * </code>
- */
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 final class Exporter
 {
     /**
@@ -89,11 +75,7 @@ final class Exporter
                 } else {
                     $result[] = sprintf(
                         'array(%s)',
-<<<<<<< HEAD
                         $this->shortenedRecursiveExport($data[$key], $context),
-=======
-                        $this->shortenedRecursiveExport($data[$key], $context)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     );
                 }
             } else {
@@ -130,11 +112,7 @@ final class Exporter
                 '%s Enum (%s, %s)',
                 $value::class,
                 $value->name,
-<<<<<<< HEAD
                 $this->export($value->value),
-=======
-                $this->export($value->value)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
@@ -142,11 +120,7 @@ final class Exporter
             return sprintf(
                 '%s Enum (%s)',
                 $value::class,
-<<<<<<< HEAD
                 $value->name,
-=======
-                $value->name
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
@@ -154,22 +128,14 @@ final class Exporter
             return sprintf(
                 '%s Object (%s)',
                 $value::class,
-<<<<<<< HEAD
                 count($this->toArray($value)) > 0 ? '...' : '',
-=======
-                count($this->toArray($value)) > 0 ? '...' : ''
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
         if (is_array($value)) {
             return sprintf(
                 'Array (%s)',
-<<<<<<< HEAD
                 count($value) > 0 ? '...' : '',
-=======
-                count($value) > 0 ? '...' : ''
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
@@ -222,22 +188,13 @@ final class Exporter
                     'inf' => $value->getInfo(),
                 ];
             }
-<<<<<<< HEAD
 
             $value->rewind();
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         return $array;
     }
 
-<<<<<<< HEAD
-=======
-    /**
-     * Recursive implementation of export.
-     */
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     private function recursiveExport(mixed &$value, int $indentation, ?Context $processed = null): string
     {
         if ($value === null) {
@@ -278,11 +235,7 @@ final class Exporter
             return sprintf(
                 'resource(%d) of type (%s)',
                 $value,
-<<<<<<< HEAD
                 get_resource_type($value),
-=======
-                get_resource_type($value)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
@@ -292,11 +245,7 @@ final class Exporter
                 $value::class,
                 spl_object_id($value),
                 $value->name,
-<<<<<<< HEAD
                 $this->export($value->value, $indentation),
-=======
-                $this->export($value->value, $indentation)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
@@ -305,20 +254,12 @@ final class Exporter
                 '%s Enum #%d (%s)',
                 $value::class,
                 spl_object_id($value),
-<<<<<<< HEAD
                 $value->name,
-=======
-                $value->name
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
         if (is_string($value)) {
-<<<<<<< HEAD
             // Match for most non-printable chars somewhat taking multibyte chars into account
-=======
-            // Match for most non printable chars somewhat taking multibyte chars into account
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             if (preg_match('/[^\x09-\x0d\x1b\x20-\xff]/', $value)) {
                 return 'Binary String: 0x' . bin2hex($value);
             }
@@ -330,13 +271,8 @@ final class Exporter
                 str_replace(
                     ["\r\n", "\n\r", "\r", "\n"],
                     ['\r\n<lf>', '\n\r<lf>', '\r<lf>', '\n<lf>'],
-<<<<<<< HEAD
                     $value,
                 ),
-=======
-                    $value
-                )
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             ) .
             "'";
         }
@@ -362,11 +298,7 @@ final class Exporter
                         '%s    %s => %s' . "\n",
                         $whitespace,
                         $this->recursiveExport($k, $indentation),
-<<<<<<< HEAD
                         $this->recursiveExport($value[$k], $indentation + 1, $processed),
-=======
-                        $this->recursiveExport($value[$k], $indentation + 1, $processed)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     );
                 }
 
@@ -393,11 +325,7 @@ final class Exporter
                         '%s    %s => %s' . "\n",
                         $whitespace,
                         $this->recursiveExport($k, $indentation),
-<<<<<<< HEAD
                         $this->recursiveExport($v, $indentation + 1, $processed),
-=======
-                        $this->recursiveExport($v, $indentation + 1, $processed)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     );
                 }
 

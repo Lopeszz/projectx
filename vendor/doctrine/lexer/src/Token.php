@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace Doctrine\Common\Lexer;
 
-<<<<<<< HEAD
 use ArrayAccess;
 use Doctrine\Deprecations\Deprecation;
 use ReturnTypeWillChange;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use UnitEnum;
 
 use function in_array;
@@ -17,14 +14,9 @@ use function in_array;
 /**
  * @template T of UnitEnum|string|int
  * @template V of string|int
-<<<<<<< HEAD
  * @implements ArrayAccess<string,mixed>
  */
 final class Token implements ArrayAccess
-=======
- */
-final class Token
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     /**
      * The string value of the token in the input string
@@ -32,11 +24,7 @@ final class Token
      * @readonly
      * @var V
      */
-<<<<<<< HEAD
     public $value;
-=======
-    public string|int $value;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * The type of the token (identifier, numeric, string, input parameter, none)
@@ -50,24 +38,15 @@ final class Token
      * The position of the token in the input string
      *
      * @readonly
-<<<<<<< HEAD
      * @var int
      */
     public $position;
-=======
-     */
-    public int $position;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * @param V      $value
      * @param T|null $type
      */
-<<<<<<< HEAD
     public function __construct($value, $type, int $position)
-=======
-    public function __construct(string|int $value, $type, int $position)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $this->value    = $value;
         $this->type     = $type;
@@ -79,7 +58,6 @@ final class Token
     {
         return in_array($this->type, $types, true);
     }
-<<<<<<< HEAD
 
     /**
      * @deprecated Use the value, type or position property instead
@@ -164,6 +142,4 @@ final class Token
 
         $this->$offset = null;
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

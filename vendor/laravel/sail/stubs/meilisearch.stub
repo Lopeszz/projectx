@@ -2,11 +2,8 @@ meilisearch:
     image: 'getmeili/meilisearch:latest'
     ports:
         - '${FORWARD_MEILISEARCH_PORT:-7700}:7700'
-<<<<<<< HEAD
     environment:
         MEILI_NO_ANALYTICS: '${MEILISEARCH_NO_ANALYTICS:-false}'
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     volumes:
         - 'sail-meilisearch:/meili_data'
     networks:

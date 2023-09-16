@@ -48,15 +48,9 @@ class ConsoleSectionOutput extends StreamOutput
     public function setMaxHeight(int $maxHeight): void
     {
         // when changing max height, clear output of current section and redraw again with the new height
-<<<<<<< HEAD
         $previousMaxHeight = $this->maxHeight;
         $this->maxHeight = $maxHeight;
         $existingContent = $this->popStreamContentUntilCurrentSection($previousMaxHeight ? min($previousMaxHeight, $this->lines) : $this->lines);
-=======
-        $existingContent = $this->popStreamContentUntilCurrentSection($this->maxHeight ? min($this->maxHeight, $this->lines) : $this->lines);
-
-        $this->maxHeight = $maxHeight;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         parent::doWrite($this->getVisibleContent(), false);
         parent::doWrite($existingContent, false);
@@ -125,12 +119,7 @@ class ConsoleSectionOutput extends StreamOutput
             // re-add the line break (that has been removed in the above `explode()` for
             // - every line that is not the last line
             // - if $newline is required, also add it to the last line
-<<<<<<< HEAD
             if ($i < $count || $newline) {
-=======
-            // - if it's not new line, but input ending with `\PHP_EOL`
-            if ($i < $count || $newline || str_ends_with($input, \PHP_EOL)) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $lineContent .= \PHP_EOL;
             }
 
@@ -178,15 +167,12 @@ class ConsoleSectionOutput extends StreamOutput
      */
     protected function doWrite(string $message, bool $newline)
     {
-<<<<<<< HEAD
         // Simulate newline behavior for consistent output formatting, avoiding extra logic
         if (!$newline && str_ends_with($message, \PHP_EOL)) {
             $message = substr($message, 0, -\strlen(\PHP_EOL));
             $newline = true;
         }
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if (!$this->isDecorated()) {
             parent::doWrite($message, $newline);
 
@@ -232,11 +218,7 @@ class ConsoleSectionOutput extends StreamOutput
                 break;
             }
 
-<<<<<<< HEAD
             $numberOfLinesToClear += $section->maxHeight ? min($section->lines, $section->maxHeight) : $section->lines;
-=======
-            $numberOfLinesToClear += $section->lines;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             if ('' !== $sectionContent = $section->getVisibleContent()) {
                 if (!str_ends_with($sectionContent, \PHP_EOL)) {
                     $sectionContent .= \PHP_EOL;

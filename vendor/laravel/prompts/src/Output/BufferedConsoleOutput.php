@@ -39,7 +39,6 @@ class BufferedConsoleOutput extends ConsoleOutput
             $this->buffer .= \PHP_EOL;
         }
     }
-<<<<<<< HEAD
 
     /**
      * Write output directly, bypassing newline capture.
@@ -48,6 +47,4 @@ class BufferedConsoleOutput extends ConsoleOutput
     {
         $this->doWrite($message, false);
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

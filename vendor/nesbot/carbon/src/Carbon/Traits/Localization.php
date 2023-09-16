@@ -23,10 +23,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Contracts\Translation\LocaleAwareInterface;
 use Symfony\Contracts\Translation\TranslatorInterface as ContractsTranslatorInterface;
 
-<<<<<<< HEAD
 // @codeCoverageIgnoreStart
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 if (interface_exists('Symfony\\Contracts\\Translation\\TranslatorInterface') &&
     !interface_exists('Symfony\\Component\\Translation\\TranslatorInterface')
 ) {
@@ -35,10 +32,7 @@ if (interface_exists('Symfony\\Contracts\\Translation\\TranslatorInterface') &&
         'Symfony\\Component\\Translation\\TranslatorInterface'
     );
 }
-<<<<<<< HEAD
 // @codeCoverageIgnoreEnd
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 /**
  * Trait Localization.

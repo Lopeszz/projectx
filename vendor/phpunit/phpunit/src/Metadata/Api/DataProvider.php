@@ -164,14 +164,11 @@ final class DataProvider
                     $data = $method->invoke($object, $_dataProvider->methodName());
                 }
             } catch (Throwable $e) {
-<<<<<<< HEAD
                 Event\Facade::emitter()->dataProviderMethodFinished(
                     $testMethod,
                     ...$methodsCalled,
                 );
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 throw new InvalidDataProviderException(
                     $e->getMessage(),
                     $e->getCode(),
@@ -187,14 +184,11 @@ final class DataProvider
                     if (is_int($key)) {
                         $data[] = $value;
                     } elseif (array_key_exists($key, $data)) {
-<<<<<<< HEAD
                         Event\Facade::emitter()->dataProviderMethodFinished(
                             $testMethod,
                             ...$methodsCalled,
                         );
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                         throw new InvalidDataProviderException(
                             sprintf(
                                 'The key "%s" has already been defined by a previous data provider',

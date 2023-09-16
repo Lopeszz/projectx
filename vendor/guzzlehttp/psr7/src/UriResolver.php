@@ -127,13 +127,8 @@ final class UriResolver
      */
     public static function relativize(UriInterface $base, UriInterface $target): UriInterface
     {
-<<<<<<< HEAD
         if ($target->getScheme() !== ''
             && ($base->getScheme() !== $target->getScheme() || $target->getAuthority() === '' && $base->getAuthority() !== '')
-=======
-        if ($target->getScheme() !== '' &&
-            ($base->getScheme() !== $target->getScheme() || $target->getAuthority() === '' && $base->getAuthority() !== '')
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ) {
             return $target;
         }

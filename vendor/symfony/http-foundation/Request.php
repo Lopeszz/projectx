@@ -239,12 +239,9 @@ class Request
         self::HEADER_X_FORWARDED_PREFIX => 'X_FORWARDED_PREFIX',
     ];
 
-<<<<<<< HEAD
     /** @var bool */
     private $isIisRewrite = false;
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     /**
      * @param array                $query      The GET parameters
      * @param array                $request    The POST parameters
@@ -1765,18 +1762,10 @@ class Request
     {
         $requestUri = '';
 
-<<<<<<< HEAD
         if ($this->isIisRewrite() && '' != $this->server->get('UNENCODED_URL')) {
             // IIS7 with URL Rewrite: make sure we get the unencoded URL (double slash problem)
             $requestUri = $this->server->get('UNENCODED_URL');
             $this->server->remove('UNENCODED_URL');
-=======
-        if ('1' == $this->server->get('IIS_WasUrlRewritten') && '' != $this->server->get('UNENCODED_URL')) {
-            // IIS7 with URL Rewrite: make sure we get the unencoded URL (double slash problem)
-            $requestUri = $this->server->get('UNENCODED_URL');
-            $this->server->remove('UNENCODED_URL');
-            $this->server->remove('IIS_WasUrlRewritten');
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } elseif ($this->server->has('REQUEST_URI')) {
             $requestUri = $this->server->get('REQUEST_URI');
 
@@ -1975,7 +1964,6 @@ class Request
      */
     private function getUrlencodedPrefix(string $string, string $prefix): ?string
     {
-<<<<<<< HEAD
         if ($this->isIisRewrite()) {
             // ISS with UrlRewriteModule might report SCRIPT_NAME/PHP_SELF with wrong case
             // see https://github.com/php/php-src/issues/11981
@@ -1983,9 +1971,6 @@ class Request
                 return null;
             }
         } elseif (!str_starts_with(rawurldecode($string), $prefix)) {
-=======
-        if (!str_starts_with(rawurldecode($string), $prefix)) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             return null;
         }
 
@@ -2114,7 +2099,6 @@ class Request
         // Now the IP chain contains only untrusted proxies and the client IP
         return $clientIps ? array_reverse($clientIps) : [$firstTrustedIp];
     }
-<<<<<<< HEAD
 
     /**
      * Is this IIS with UrlRewriteModule?
@@ -2131,6 +2115,4 @@ class Request
 
         return $this->isIisRewrite;
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

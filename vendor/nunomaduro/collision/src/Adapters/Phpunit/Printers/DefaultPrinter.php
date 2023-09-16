@@ -25,11 +25,8 @@ use PHPUnit\Event\Test\NoticeTriggered;
 use PHPUnit\Event\Test\Passed;
 use PHPUnit\Event\Test\PhpDeprecationTriggered;
 use PHPUnit\Event\Test\PhpNoticeTriggered;
-<<<<<<< HEAD
 use PHPUnit\Event\Test\PhpunitDeprecationTriggered;
 use PHPUnit\Event\Test\PhpunitErrorTriggered;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use PHPUnit\Event\Test\PhpunitWarningTriggered;
 use PHPUnit\Event\Test\PhpWarningTriggered;
 use PHPUnit\Event\Test\PreparationStarted;
@@ -322,7 +319,6 @@ final class DefaultPrinter
     }
 
     /**
-<<<<<<< HEAD
      * Listen to the test phpunit deprecation triggered event.
      */
     public function testPhpunitDeprecationTriggered(PhpunitDeprecationTriggered $event): void
@@ -343,8 +339,6 @@ final class DefaultPrinter
     }
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Listen to the test warning triggered event.
      */
     public function testNoticeTriggered(NoticeTriggered $event): void
@@ -397,11 +391,6 @@ final class DefaultPrinter
     {
         $result = Facade::result();
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if (ResultReflection::numberOfTests(Facade::result()) === 0) {
             $this->output->writeln([
                 '',

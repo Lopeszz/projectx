@@ -30,11 +30,7 @@ final class Php83
             throw new \ValueError('json_validate(): Argument #2 ($depth) must be greater than 0');
         }
 
-<<<<<<< HEAD
         if ($depth > self::JSON_MAX_DEPTH) {
-=======
-        if ($depth >= self::JSON_MAX_DEPTH) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             throw new \ValueError(sprintf('json_validate(): Argument #2 ($depth) must be less than %d', self::JSON_MAX_DEPTH));
         }
 
@@ -42,7 +38,6 @@ final class Php83
 
         return \JSON_ERROR_NONE === json_last_error();
     }
-<<<<<<< HEAD
 
     public static function mb_str_pad(string $string, int $length, string $pad_string = ' ', int $pad_type = \STR_PAD_RIGHT, string $encoding = null): string
     {
@@ -87,6 +82,4 @@ final class Php83
                 return mb_substr(str_repeat($pad_string, $leftPaddingLength), 0, $leftPaddingLength, $encoding).$string.mb_substr(str_repeat($pad_string, $rightPaddingLength), 0, $rightPaddingLength, $encoding);
         }
     }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

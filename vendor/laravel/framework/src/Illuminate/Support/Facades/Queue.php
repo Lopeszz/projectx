@@ -49,10 +49,7 @@ use Illuminate\Support\Testing\Fakes\QueueFake;
  * @method static bool hasPushed(string $job)
  * @method static bool shouldFakeJob(object $job)
  * @method static array pushedJobs()
-<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\QueueFake serializeAndRestore(bool $serializeAndRestore = true)
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  *
  * @see \Illuminate\Queue\QueueManager
  * @see \Illuminate\Queue\Queue

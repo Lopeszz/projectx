@@ -15,17 +15,11 @@ use function date;
 use function dirname;
 use function str_ends_with;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
-<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\CodeCoverage\Report\Thresholds;
 use SebastianBergmann\CodeCoverage\Util\Filesystem;
 use SebastianBergmann\Template\Exception;
-=======
-use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
-use SebastianBergmann\CodeCoverage\Report\Thresholds;
-use SebastianBergmann\CodeCoverage\Util\Filesystem;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use SebastianBergmann\Template\Template;
 
 final class Facade
@@ -135,7 +129,6 @@ final class Facade
             ]
         );
 
-<<<<<<< HEAD
         try {
             $template->renderTo($this->directory($target . '_css') . 'style.css');
         } catch (Exception $e) {
@@ -145,9 +138,6 @@ final class Facade
                 $e
             );
         }
-=======
-        $template->renderTo($this->directory($target . '_css') . 'style.css');
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     private function directory(string $directory): string

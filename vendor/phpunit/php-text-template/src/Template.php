@@ -96,11 +96,7 @@ final class Template
      */
     public function renderTo(string $target): void
     {
-<<<<<<< HEAD
         if (!@file_put_contents($target, $this->render())) {
-=======
-        if (!file_put_contents($target, $this->render())) {
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             throw new RuntimeException(
                 sprintf(
                     'Writing rendered result to "%s" failed',

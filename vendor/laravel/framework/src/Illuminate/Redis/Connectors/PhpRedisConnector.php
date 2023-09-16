@@ -188,19 +188,11 @@ class PhpRedisConnector implements Connector
 
         return tap(new RedisCluster(...$parameters), function ($client) use ($options) {
             if (! empty($options['prefix'])) {
-<<<<<<< HEAD
                 $client->setOption(Redis::OPT_PREFIX, $options['prefix']);
             }
 
             if (! empty($options['scan'])) {
                 $client->setOption(Redis::OPT_SCAN, $options['scan']);
-=======
-                $client->setOption(RedisCluster::OPT_PREFIX, $options['prefix']);
-            }
-
-            if (! empty($options['scan'])) {
-                $client->setOption(RedisCluster::OPT_SCAN, $options['scan']);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             }
 
             if (! empty($options['failover'])) {
@@ -212,7 +204,6 @@ class PhpRedisConnector implements Connector
             }
 
             if (array_key_exists('serializer', $options)) {
-<<<<<<< HEAD
                 $client->setOption(Redis::OPT_SERIALIZER, $options['serializer']);
             }
 
@@ -222,17 +213,6 @@ class PhpRedisConnector implements Connector
 
             if (array_key_exists('compression_level', $options)) {
                 $client->setOption(Redis::OPT_COMPRESSION_LEVEL, $options['compression_level']);
-=======
-                $client->setOption(RedisCluster::OPT_SERIALIZER, $options['serializer']);
-            }
-
-            if (array_key_exists('compression', $options)) {
-                $client->setOption(RedisCluster::OPT_COMPRESSION, $options['compression']);
-            }
-
-            if (array_key_exists('compression_level', $options)) {
-                $client->setOption(RedisCluster::OPT_COMPRESSION_LEVEL, $options['compression_level']);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             }
         });
     }

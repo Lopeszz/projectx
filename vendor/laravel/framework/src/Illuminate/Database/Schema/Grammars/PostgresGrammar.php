@@ -427,11 +427,7 @@ class PostgresGrammar extends Grammar
      */
     public function compileDropPrimary(Blueprint $blueprint, Fluent $command)
     {
-<<<<<<< HEAD
         $index = $this->wrap("{$blueprint->getPrefix()}{$blueprint->getTable()}_pkey");
-=======
-        $index = $this->wrap("{$blueprint->getTable()}_pkey");
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         return 'alter table '.$this->wrapTable($blueprint)." drop constraint {$index}";
     }

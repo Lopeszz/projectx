@@ -2,11 +2,8 @@
 
 namespace Illuminate\Queue\Events;
 
-<<<<<<< HEAD
 use RuntimeException;
 
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 class JobQueued
 {
     /**
@@ -31,7 +28,6 @@ class JobQueued
     public $job;
 
     /**
-<<<<<<< HEAD
      * The job payload.
      *
      * @var string|null
@@ -39,28 +35,19 @@ class JobQueued
     public $payload;
 
     /**
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create a new event instance.
      *
      * @param  string  $connectionName
      * @param  string|int|null  $id
      * @param  \Closure|string|object  $job
-<<<<<<< HEAD
      * @param  string|null  $payload
      * @return void
      */
     public function __construct($connectionName, $id, $job, $payload = null)
-=======
-     * @return void
-     */
-    public function __construct($connectionName, $id, $job)
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $this->connectionName = $connectionName;
         $this->id = $id;
         $this->job = $job;
-<<<<<<< HEAD
         $this->payload = $payload;
     }
 
@@ -76,7 +63,5 @@ class JobQueued
         }
 
         return json_decode($this->payload, true, flags: JSON_THROW_ON_ERROR);
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 }

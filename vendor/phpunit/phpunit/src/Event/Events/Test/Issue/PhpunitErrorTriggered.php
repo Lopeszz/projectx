@@ -11,10 +11,7 @@ namespace PHPUnit\Event\Test;
 
 use const PHP_EOL;
 use function sprintf;
-<<<<<<< HEAD
 use function trim;
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use PHPUnit\Event\Code\Test;
 use PHPUnit\Event\Event;
 use PHPUnit\Event\Telemetry;
@@ -54,11 +51,7 @@ final class PhpunitErrorTriggered implements Event
 
     public function asString(): string
     {
-<<<<<<< HEAD
         $message = trim($this->message);
-=======
-        $message = $this->message;
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         if (!empty($message)) {
             $message = PHP_EOL . $message;

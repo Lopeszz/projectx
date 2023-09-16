@@ -263,15 +263,11 @@ class FilesystemManager implements FactoryContract
         $config += ['version' => 'latest'];
 
         if (! empty($config['key']) && ! empty($config['secret'])) {
-<<<<<<< HEAD
             $config['credentials'] = Arr::only($config, ['key', 'secret']);
         }
 
         if (! empty($config['token'])) {
             $config['credentials']['token'] = $config['token'];
-=======
-            $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         return Arr::except($config, ['token']);
@@ -293,7 +289,6 @@ class FilesystemManager implements FactoryContract
 
         return $this->build(tap(
             is_string($config['disk']) ? $this->getConfig($config['disk']) : $config['disk'],
-<<<<<<< HEAD
             function (&$parent) use ($config) {
                 $parent['prefix'] = $config['prefix'];
 
@@ -301,9 +296,6 @@ class FilesystemManager implements FactoryContract
                     $parent['visibility'] = $config['visibility'];
                 }
             }
-=======
-            fn (&$parent) => $parent['prefix'] = $config['prefix']
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ));
     }
 

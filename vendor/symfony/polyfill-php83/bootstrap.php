@@ -18,7 +18,6 @@ if (\PHP_VERSION_ID >= 80300) {
 if (!function_exists('json_validate')) {
     function json_validate(string $json, int $depth = 512, int $flags = 0): bool { return p\Php83::json_validate($json, $depth, $flags); }
 }
-<<<<<<< HEAD
 
 if (!function_exists('mb_str_pad') && function_exists('mb_substr')) {
     function mb_str_pad(string $string, int $length, string $pad_string = ' ', int $pad_type = STR_PAD_RIGHT, ?string $encoding = null): string { return p\Php83::mb_str_pad($string, $length, $pad_string, $pad_type, $encoding); }
@@ -39,5 +38,3 @@ if (!function_exists('ldap_exop_sync') && function_exists('ldap_exop')) {
 if (!function_exists('ldap_connect_wallet') && function_exists('ldap_connect')) {
     function ldap_connect_wallet(?string $uri, string $wallet, string $password, int $auth_mode = \GSLC_SSL_NO_AUTH) { return ldap_connect($uri, $wallet, $password, $auth_mode); }
 }
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1

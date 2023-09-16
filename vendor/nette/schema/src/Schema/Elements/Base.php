@@ -85,11 +85,7 @@ trait Base
 		if ($this->required) {
 			$context->addError(
 				'The mandatory item %path% is missing.',
-<<<<<<< HEAD
 				Nette\Schema\Message::MissingItem
-=======
-				Nette\Schema\Message::MISSING_ITEM
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			);
 			return null;
 		}
@@ -113,11 +109,7 @@ trait Base
 		if ($this->deprecated !== null) {
 			$context->addWarning(
 				$this->deprecated,
-<<<<<<< HEAD
 				Nette\Schema\Message::Deprecated
-=======
-				Nette\Schema\Message::DEPRECATED
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			);
 		}
 	}
@@ -129,11 +121,7 @@ trait Base
 			$expected = str_replace(['|', ':'], [' or ', ' in range '], $expected);
 			$context->addError(
 				'The %label% %path% expects to be %expected%, %value% given.',
-<<<<<<< HEAD
 				Nette\Schema\Message::TypeMismatch,
-=======
-				Nette\Schema\Message::TYPE_MISMATCH,
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 				['value' => $value, 'expected' => $expected]
 			);
 			return false;
@@ -155,11 +143,7 @@ trait Base
 			if (!self::isInRange($length, $range)) {
 				$context->addError(
 					"The length of %label% %path% expects to be in range %expected%, %length% $label given.",
-<<<<<<< HEAD
 					Nette\Schema\Message::LengthOutOfRange,
-=======
-					Nette\Schema\Message::LENGTH_OUT_OF_RANGE,
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 					['value' => $value, 'length' => $length, 'expected' => implode('..', $range)]
 				);
 				return false;
@@ -167,11 +151,7 @@ trait Base
 		} elseif ((is_int($value) || is_float($value)) && !self::isInRange($value, $range)) {
 			$context->addError(
 				'The %label% %path% expects to be in range %expected%, %value% given.',
-<<<<<<< HEAD
 				Nette\Schema\Message::ValueOutOfRange,
-=======
-				Nette\Schema\Message::VALUE_OUT_OF_RANGE,
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 				['value' => $value, 'expected' => implode('..', $range)]
 			);
 			return false;
@@ -208,11 +188,7 @@ trait Base
 				$expected = $description ?: (is_string($handler) ? "$handler()" : "#$i");
 				$context->addError(
 					'Failed assertion ' . ($description ? "'%assertion%'" : '%assertion%') . ' for %label% %path% with value %value%.',
-<<<<<<< HEAD
 					Nette\Schema\Message::FailedAssertion,
-=======
-					Nette\Schema\Message::FAILED_ASSERTION,
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 					['value' => $value, 'assertion' => $expected]
 				);
 				return;

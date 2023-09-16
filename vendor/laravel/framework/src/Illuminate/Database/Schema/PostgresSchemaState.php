@@ -70,11 +70,7 @@ class PostgresSchemaState extends SchemaState
 
         return [
             'LARAVEL_LOAD_HOST' => is_array($config['host']) ? $config['host'][0] : $config['host'],
-<<<<<<< HEAD
             'LARAVEL_LOAD_PORT' => $config['port'] ?? '',
-=======
-            'LARAVEL_LOAD_PORT' => $config['port'],
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             'LARAVEL_LOAD_USER' => $config['username'],
             'PGPASSWORD' => $config['password'],
             'LARAVEL_LOAD_DATABASE' => $config['database'],

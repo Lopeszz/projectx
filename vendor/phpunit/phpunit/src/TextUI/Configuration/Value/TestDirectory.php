@@ -18,24 +18,18 @@ use PHPUnit\Util\VersionComparisonOperator;
  */
 final class TestDirectory
 {
-<<<<<<< HEAD
     /**
      * @psalm-var non-empty-string
      */
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     private readonly string $path;
     private readonly string $prefix;
     private readonly string $suffix;
     private readonly string $phpVersion;
     private readonly VersionComparisonOperator $phpVersionOperator;
 
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $path
      */
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function __construct(string $path, string $prefix, string $suffix, string $phpVersion, VersionComparisonOperator $phpVersionOperator)
     {
         $this->path               = $path;
@@ -45,12 +39,9 @@ final class TestDirectory
         $this->phpVersionOperator = $phpVersionOperator;
     }
 
-<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
-=======
->>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function path(): string
     {
         return $this->path;
