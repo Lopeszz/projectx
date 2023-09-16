@@ -2,6 +2,7 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
 ## [5.0.1] - 2023-08-14
 
 ### Fixed
@@ -9,6 +10,8 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 * `MockObjectComparator` only works on instances of `PHPUnit\Framework\MockObject\MockObject`, but not on instances of `PHPUnit\Framework\MockObject\Stub`
 * `MockObjectComparator` only ignores the `$__phpunit_invocationMocker` property, but not other properties with names prefixed with `__phpunit_`
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ## [5.0.0] - 2023-02-03
 
 ### Changed
@@ -144,7 +147,10 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 * Added `SebastianBergmann\Comparator\Factory::reset()` to unregister all non-default comparators
 * Added support for `phpunit/phpunit-mock-objects` version `^5.0`
 
+<<<<<<< HEAD
 [5.0.1]: https://github.com/sebastianbergmann/comparator/compare/5.0.0...5.0.1
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 [5.0.0]: https://github.com/sebastianbergmann/comparator/compare/4.0.8...5.0.0
 [4.0.8]: https://github.com/sebastianbergmann/comparator/compare/4.0.7...4.0.8
 [4.0.7]: https://github.com/sebastianbergmann/comparator/compare/4.0.6...4.0.7

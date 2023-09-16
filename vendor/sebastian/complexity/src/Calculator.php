@@ -47,7 +47,11 @@ final class Calculator
             throw new RuntimeException(
                 $error->getMessage(),
                 $error->getCode(),
+<<<<<<< HEAD
                 $error,
+=======
+                $error
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
         // @codeCoverageIgnoreEnd
@@ -75,7 +79,11 @@ final class Calculator
             throw new RuntimeException(
                 $error->getMessage(),
                 $error->getCode(),
+<<<<<<< HEAD
                 $error,
+=======
+                $error
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
         // @codeCoverageIgnoreEnd

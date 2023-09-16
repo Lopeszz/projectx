@@ -24,8 +24,11 @@ trait DatabaseTruncation
      */
     protected function truncateDatabaseTables(): void
     {
+<<<<<<< HEAD
         $this->beforeTruncatingDatabase();
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         // Migrate and seed the database on first run...
         if (! RefreshDatabaseState::$migrated) {
             $this->artisan('migrate:fresh', $this->migrateFreshUsing());
@@ -47,8 +50,11 @@ trait DatabaseTruncation
             // Use the default seeder class...
             $this->artisan('db:seed');
         }
+<<<<<<< HEAD
 
         $this->afterTruncatingDatabase();
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
@@ -89,13 +95,19 @@ trait DatabaseTruncation
                 fn ($tables) => $tables->intersect($this->tablesToTruncate),
                 fn ($tables) => $tables->diff($this->exceptTables($name))
             )
+<<<<<<< HEAD
             ->filter(fn ($table) => $connection->table($this->withoutTablePrefix($connection, $table))->exists())
             ->each(fn ($table) => $connection->table($this->withoutTablePrefix($connection, $table))->truncate());
+=======
+            ->filter(fn ($table) => $connection->table($table)->exists())
+            ->each(fn ($table) => $connection->table($table)->truncate());
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         $connection->setEventDispatcher($dispatcher);
     }
 
     /**
+<<<<<<< HEAD
      * Remove the table prefix from a table name, if it exists.
      *
      * @param  \Illuminate\Database\ConnectionInterface  $connection
@@ -112,6 +124,8 @@ trait DatabaseTruncation
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * The database connections that should have their tables truncated.
      *
      * @return array
@@ -148,6 +162,7 @@ trait DatabaseTruncation
 
         return [$this->app['config']->get('database.migrations')];
     }
+<<<<<<< HEAD
 
     /**
      * Perform any work that should take place before the database has started truncating.
@@ -168,4 +183,6 @@ trait DatabaseTruncation
     {
         //
     }
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

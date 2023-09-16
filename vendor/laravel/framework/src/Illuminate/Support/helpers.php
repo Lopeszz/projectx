@@ -314,6 +314,7 @@ if (! function_exists('throw_if')) {
     /**
      * Throw the given exception if the given condition is true.
      *
+<<<<<<< HEAD
      * @template TException of \Throwable
      *
      * @param  mixed  $condition
@@ -322,6 +323,14 @@ if (! function_exists('throw_if')) {
      * @return mixed
      *
      * @throws TException
+=======
+     * @param  mixed  $condition
+     * @param  \Throwable|string  $exception
+     * @param  mixed  ...$parameters
+     * @return mixed
+     *
+     * @throws \Throwable
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     function throw_if($condition, $exception = 'RuntimeException', ...$parameters)
     {
@@ -341,6 +350,7 @@ if (! function_exists('throw_unless')) {
     /**
      * Throw the given exception unless the given condition is true.
      *
+<<<<<<< HEAD
      * @template TException of \Throwable
      *
      * @param  mixed  $condition
@@ -349,6 +359,14 @@ if (! function_exists('throw_unless')) {
      * @return mixed
      *
      * @throws TException
+=======
+     * @param  mixed  $condition
+     * @param  \Throwable|string  $exception
+     * @param  mixed  ...$parameters
+     * @return mixed
+     *
+     * @throws \Throwable
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     function throw_unless($condition, $exception = 'RuntimeException', ...$parameters)
     {

@@ -656,6 +656,7 @@ class Vite implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
      * Get the content of a given asset.
      *
      * @param  string  $asset
@@ -680,6 +681,8 @@ class Vite implements Htmlable
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Generate an asset path for the application.
      *
      * @param  string  $path

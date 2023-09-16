@@ -844,7 +844,11 @@ class PendingRequest
      * Send a pool of asynchronous requests concurrently.
      *
      * @param  callable  $callback
+<<<<<<< HEAD
      * @return array<array-key, \Illuminate\Http\Client\Response>
+=======
+     * @return array
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function pool(callable $callback)
     {
@@ -889,7 +893,11 @@ class PendingRequest
 
         return retry($this->tries ?? 1, function ($attempt) use ($method, $url, $options, &$shouldRetry) {
             try {
+<<<<<<< HEAD
                 return tap($this->newResponse($this->sendRequest($method, $url, $options)), function ($response) use ($attempt, &$shouldRetry) {
+=======
+                return tap(new Response($this->sendRequest($method, $url, $options)), function ($response) use ($attempt, &$shouldRetry) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     $this->populateResponse($response);
 
                     $this->dispatchResponseReceivedEvent($response);
@@ -1001,13 +1009,21 @@ class PendingRequest
     {
         return $this->promise = $this->sendRequest($method, $url, $options)
             ->then(function (MessageInterface $message) {
+<<<<<<< HEAD
                 return tap($this->newResponse($message), function ($response) {
+=======
+                return tap(new Response($message), function ($response) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     $this->populateResponse($response);
                     $this->dispatchResponseReceivedEvent($response);
                 });
             })
             ->otherwise(function (TransferException $e) {
+<<<<<<< HEAD
                 return $e instanceof RequestException && $e->hasResponse() ? $this->populateResponse($this->newResponse($e->getResponse())) : $e;
+=======
+                return $e instanceof RequestException && $e->hasResponse() ? $this->populateResponse(new Response($e->getResponse())) : $e;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             });
     }
 
@@ -1193,7 +1209,11 @@ class PendingRequest
                 return $promise->then(function ($response) use ($request, $options) {
                     $this->factory?->recordRequestResponsePair(
                         (new Request($request))->withData($options['laravel_data']),
+<<<<<<< HEAD
                         $this->newResponse($response)
+=======
+                        new Response($response)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     );
 
                     return $response;
@@ -1299,6 +1319,7 @@ class PendingRequest
     }
 
     /**
+<<<<<<< HEAD
      * Create a new response instance using the given PSR response.
      *
      * @param  \Psr\Http\Message\MessageInterface  $response
@@ -1310,6 +1331,8 @@ class PendingRequest
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Register a stub callable that will intercept requests and be able to return stub responses.
      *
      * @param  callable  $callback

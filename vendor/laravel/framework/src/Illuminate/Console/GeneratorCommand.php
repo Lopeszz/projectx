@@ -247,7 +247,10 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
 
         return collect((new Finder)->files()->depth(0)->in($modelPath))
             ->map(fn ($file) => $file->getBasename('.php'))
+<<<<<<< HEAD
             ->sort()
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             ->values()
             ->all();
     }
@@ -267,7 +270,10 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
 
         return collect((new Finder)->files()->depth(0)->in($eventPath))
             ->map(fn ($file) => $file->getBasename('.php'))
+<<<<<<< HEAD
             ->sort()
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             ->values()
             ->all();
     }
@@ -500,7 +506,11 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
                     'Factory' => 'E.g. PostFactory',
                     'Job' => 'E.g. ProcessPodcast',
                     'Listener' => 'E.g. SendPodcastNotification',
+<<<<<<< HEAD
                     'Mailable' => 'E.g. OrderShipped',
+=======
+                    'Mail' => 'E.g. OrderShipped',
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     'Middleware' => 'E.g. EnsureTokenIsValid',
                     'Model' => 'E.g. Flight',
                     'Notification' => 'E.g. InvoicePaid',

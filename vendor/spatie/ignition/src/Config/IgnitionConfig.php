@@ -150,11 +150,14 @@ class IgnitionConfig implements Arrayable
             'theme' => 'light',
             'editor' => 'vscode',
             'editor_options' => [
+<<<<<<< HEAD
                 'clipboard' => [
                     'label' => 'Clipboard',
                     'url' => '%path:%line',
                     'clipboard' => true,
                 ],
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 'sublime' => [
                     'label' => 'Sublime',
                     'url' => 'subl://open?url=file://%path&line=%line',

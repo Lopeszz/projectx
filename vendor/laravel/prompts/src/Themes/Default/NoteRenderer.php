@@ -42,11 +42,14 @@ class NoteRenderer extends Renderer
 
                 return $this;
 
+<<<<<<< HEAD
             case 'info':
                 $lines->each(fn ($line) => $this->line($this->green(" {$line}")));
 
                 return $this;
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             default:
                 $lines->each(fn ($line) => $this->line(" {$line}"));
 

@@ -6,7 +6,11 @@ use DateTimeInterface;
 use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Support\Facades\Date;
 
+<<<<<<< HEAD
 class DatabaseFailedJobProvider implements CountableFailedJobProvider, FailedJobProviderInterface, PrunableFailedJobProvider
+=======
+class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableFailedJobProvider
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     /**
      * The connection resolver implementation.
@@ -131,6 +135,7 @@ class DatabaseFailedJobProvider implements CountableFailedJobProvider, FailedJob
     }
 
     /**
+<<<<<<< HEAD
      * Count the failed jobs.
      *
      * @param  string|null  $connection
@@ -146,6 +151,8 @@ class DatabaseFailedJobProvider implements CountableFailedJobProvider, FailedJob
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get a new query builder instance for the table.
      *
      * @return \Illuminate\Database\Query\Builder

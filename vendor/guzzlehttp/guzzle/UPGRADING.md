@@ -27,7 +27,11 @@ Please make sure:
 - Function `GuzzleHttp\Exception\RequestException::getResponseBodySummary` is removed.
   Use `\GuzzleHttp\Psr7\get_message_body_summary` as an alternative.
 - Function `GuzzleHttp\Cookie\CookieJar::getCookieValue` is removed.
+<<<<<<< HEAD
 - Request option `exceptions` is removed. Please use `http_errors`.
+=======
+- Request option `exception` is removed. Please use `http_errors`.
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 - Request option `save_to` is removed. Please use `sink`.
 - Pool option `pool_size` is removed. Please use `concurrency`.
 - We now look for environment variables in the `$_SERVER` super global, due to thread safety issues with `getenv`. We continue to fallback to `getenv` in CLI environments, for maximum compatibility.

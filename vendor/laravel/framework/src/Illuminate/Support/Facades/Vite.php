@@ -17,7 +17,10 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Foundation\Vite usePreloadTagAttributes(callable|array|false $attributes)
  * @method static \Illuminate\Support\HtmlString|void reactRefresh()
  * @method static string asset(string $asset, string|null $buildDirectory = null)
+<<<<<<< HEAD
  * @method static string content(string $asset, string|null $buildDirectory = null)
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  * @method static string|null manifestHash(string|null $buildDirectory = null)
  * @method static bool isRunningHot()
  * @method static string toHtml()

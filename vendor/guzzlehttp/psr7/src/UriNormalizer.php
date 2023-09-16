@@ -131,8 +131,13 @@ final class UriNormalizer
             $uri = self::decodeUnreservedCharacters($uri);
         }
 
+<<<<<<< HEAD
         if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === ''
             && ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
+=======
+        if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === '' &&
+            ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ) {
             $uri = $uri->withPath('/');
         }

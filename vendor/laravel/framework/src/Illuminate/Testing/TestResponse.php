@@ -96,6 +96,7 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+<<<<<<< HEAD
      * Assert that the Precognition request was successful.
      *
      * @return $this
@@ -119,6 +120,8 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Assert that the response is a server error.
      *
      * @return $this
@@ -216,7 +219,15 @@ class TestResponse implements ArrayAccess
             $this->statusMessageWithDetails('201, 301, 302, 303, 307, 308', $this->getStatusCode()),
         );
 
+<<<<<<< HEAD
         $this->assertLocation($uri);
+=======
+        $request = Request::create($this->headers->get('Location'));
+
+        PHPUnit::assertEquals(
+            app('url')->to($uri), $request->fullUrl()
+        );
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         return $this;
     }
@@ -686,6 +697,7 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+<<<<<<< HEAD
      * Assert that the given path in the response contains all of the expected values without looking at the order.
      *
      * @param  string  $path
@@ -700,6 +712,8 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Assert that the response has the exact given JSON.
      *
      * @param  array  $data

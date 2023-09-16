@@ -14,6 +14,7 @@ namespace SebastianBergmann\LinesOfCode;
  */
 final class LinesOfCode
 {
+<<<<<<< HEAD
     /**
      * @psalm-var non-negative-int
      */
@@ -40,27 +41,47 @@ final class LinesOfCode
      * @psalm-param non-negative-int $nonCommentLinesOfCode
      * @psalm-param non-negative-int $logicalLinesOfCode
      *
+=======
+    private int $linesOfCode;
+    private int $commentLinesOfCode;
+    private int $nonCommentLinesOfCode;
+    private int $logicalLinesOfCode;
+
+    /**
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @throws IllogicalValuesException
      * @throws NegativeValueException
      */
     public function __construct(int $linesOfCode, int $commentLinesOfCode, int $nonCommentLinesOfCode, int $logicalLinesOfCode)
     {
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($linesOfCode < 0) {
             throw new NegativeValueException('$linesOfCode must not be negative');
         }
 
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($commentLinesOfCode < 0) {
             throw new NegativeValueException('$commentLinesOfCode must not be negative');
         }
 
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($nonCommentLinesOfCode < 0) {
             throw new NegativeValueException('$nonCommentLinesOfCode must not be negative');
         }
 
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($logicalLinesOfCode < 0) {
             throw new NegativeValueException('$logicalLinesOfCode must not be negative');
         }
@@ -75,33 +96,45 @@ final class LinesOfCode
         $this->logicalLinesOfCode    = $logicalLinesOfCode;
     }
 
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function linesOfCode(): int
     {
         return $this->linesOfCode;
     }
 
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function commentLinesOfCode(): int
     {
         return $this->commentLinesOfCode;
     }
 
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function nonCommentLinesOfCode(): int
     {
         return $this->nonCommentLinesOfCode;
     }
 
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     public function logicalLinesOfCode(): int
     {
         return $this->logicalLinesOfCode;

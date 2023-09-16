@@ -349,15 +349,24 @@ class BuilderFactory
     /**
      * Creates a class constant fetch node.
      *
+<<<<<<< HEAD
      * @param string|Name|Expr $class Class name
      * @param string|Identifier|Expr $name  Constant name
+=======
+     * @param string|Name|Expr  $class Class name
+     * @param string|Identifier $name  Constant name
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @return Expr\ClassConstFetch
      */
     public function classConstFetch($class, $name): Expr\ClassConstFetch {
         return new Expr\ClassConstFetch(
             BuilderHelpers::normalizeNameOrExpr($class),
+<<<<<<< HEAD
             BuilderHelpers::normalizeIdentifierOrExpr($name)
+=======
+            BuilderHelpers::normalizeIdentifier($name)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         );
     }
 

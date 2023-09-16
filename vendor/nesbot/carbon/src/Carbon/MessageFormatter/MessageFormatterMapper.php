@@ -15,13 +15,19 @@ use ReflectionMethod;
 use Symfony\Component\Translation\Formatter\MessageFormatter;
 use Symfony\Component\Translation\Formatter\MessageFormatterInterface;
 
+<<<<<<< HEAD
 // @codeCoverageIgnoreStart
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 $transMethod = new ReflectionMethod(MessageFormatterInterface::class, 'format');
 
 require $transMethod->getParameters()[0]->hasType()
     ? __DIR__.'/../../../lazy/Carbon/MessageFormatter/MessageFormatterMapperStrongType.php'
     : __DIR__.'/../../../lazy/Carbon/MessageFormatter/MessageFormatterMapperWeakType.php';
+<<<<<<< HEAD
 // @codeCoverageIgnoreEnd
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 final class MessageFormatterMapper extends LazyMessageFormatter
 {

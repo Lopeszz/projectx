@@ -76,7 +76,10 @@ use Illuminate\Foundation\Console\UpCommand;
 use Illuminate\Foundation\Console\VendorPublishCommand;
 use Illuminate\Foundation\Console\ViewCacheCommand;
 use Illuminate\Foundation\Console\ViewClearCommand;
+<<<<<<< HEAD
 use Illuminate\Foundation\Console\ViewMakeCommand;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Illuminate\Notifications\Console\NotificationTableCommand;
 use Illuminate\Queue\Console\BatchesTableCommand;
 use Illuminate\Queue\Console\ClearCommand as QueueClearCommand;
@@ -205,7 +208,10 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
         'StubPublish' => StubPublishCommand::class,
         'TestMake' => TestMakeCommand::class,
         'VendorPublish' => VendorPublishCommand::class,
+<<<<<<< HEAD
         'ViewMake' => ViewMakeCommand::class,
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     ];
 
     /**

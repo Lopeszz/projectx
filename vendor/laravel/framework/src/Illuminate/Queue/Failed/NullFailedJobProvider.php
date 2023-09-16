@@ -2,7 +2,11 @@
 
 namespace Illuminate\Queue\Failed;
 
+<<<<<<< HEAD
 class NullFailedJobProvider implements CountableFailedJobProvider, FailedJobProviderInterface
+=======
+class NullFailedJobProvider implements FailedJobProviderInterface
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     /**
      * Log a failed job into storage.
@@ -60,6 +64,7 @@ class NullFailedJobProvider implements CountableFailedJobProvider, FailedJobProv
     {
         //
     }
+<<<<<<< HEAD
 
     /**
      * Count the failed jobs.
@@ -72,4 +77,6 @@ class NullFailedJobProvider implements CountableFailedJobProvider, FailedJobProv
     {
         return 0;
     }
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

@@ -20,7 +20,11 @@
         "symfony/deprecation-contracts": "^2.5|^3",
         "symfony/error-handler": "^6.3",
         "symfony/event-dispatcher": "^5.4|^6.0",
+<<<<<<< HEAD
         "symfony/http-foundation": "^6.3.4",
+=======
+        "symfony/http-foundation": "^6.2.7",
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "symfony/polyfill-ctype": "^1.8",
         "psr/log": "^1|^2|^3"
     },
@@ -30,7 +34,11 @@
         "symfony/config": "^6.1",
         "symfony/console": "^5.4|^6.0",
         "symfony/css-selector": "^5.4|^6.0",
+<<<<<<< HEAD
         "symfony/dependency-injection": "^6.3.4",
+=======
+        "symfony/dependency-injection": "^6.3",
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "symfony/dom-crawler": "^5.4|^6.0",
         "symfony/expression-language": "^5.4|^6.0",
         "symfony/finder": "^5.4|^6.0",
@@ -57,7 +65,11 @@
         "symfony/config": "<6.1",
         "symfony/console": "<5.4",
         "symfony/form": "<5.4",
+<<<<<<< HEAD
         "symfony/dependency-injection": "<6.3.4",
+=======
+        "symfony/dependency-injection": "<6.3",
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "symfony/doctrine-bridge": "<5.4",
         "symfony/http-client": "<5.4",
         "symfony/http-client-contracts": "<2.5",

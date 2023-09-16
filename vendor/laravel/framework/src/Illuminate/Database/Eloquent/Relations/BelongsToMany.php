@@ -11,7 +11,10 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\Relations\Concerns\AsPivot;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithPivotTable;
+<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 
@@ -136,7 +139,11 @@ class BelongsToMany extends Relation
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
+<<<<<<< HEAD
      * @param  string|class-string<\Illuminate\Database\Eloquent\Model>  $table
+=======
+     * @param  string  $table
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @param  string  $foreignPivotKey
      * @param  string  $relatedPivotKey
      * @param  string  $parentKey
@@ -610,7 +617,11 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
      * Get the first record matching the attributes. If the record is not found, create it.
+=======
+     * Get the first related record matching the attributes or create it.
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @param  array  $attributes
      * @param  array  $values
@@ -622,6 +633,7 @@ class BelongsToMany extends Relation
     {
         if (is_null($instance = (clone $this)->where($attributes)->first())) {
             if (is_null($instance = $this->related->where($attributes)->first())) {
+<<<<<<< HEAD
                 $instance = $this->createOrFirst($attributes, $values, $joining, $touch);
             } else {
                 try {
@@ -629,6 +641,11 @@ class BelongsToMany extends Relation
                 } catch (UniqueConstraintViolationException) {
                     // Nothing to do, the model was already attached...
                 }
+=======
+                $instance = $this->create(array_merge($attributes, $values), $joining, $touch);
+            } else {
+                $this->attach($instance, $joining, $touch);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             }
         }
 
@@ -636,6 +653,7 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
      * Attempt to create the record. If a unique constraint violation occurs, attempt to find the matching record.
      *
      * @param  array  $attributes
@@ -662,6 +680,8 @@ class BelongsToMany extends Relation
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create or update a related record matching the attributes, and fill it with values.
      *
      * @param  array  $attributes
@@ -672,6 +692,7 @@ class BelongsToMany extends Relation
      */
     public function updateOrCreate(array $attributes, array $values = [], array $joining = [], $touch = true)
     {
+<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values, $joining, $touch), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values);
@@ -679,6 +700,21 @@ class BelongsToMany extends Relation
                 $instance->save(['touch' => false]);
             }
         });
+=======
+        if (is_null($instance = (clone $this)->where($attributes)->first())) {
+            if (is_null($instance = $this->related->where($attributes)->first())) {
+                return $this->create(array_merge($attributes, $values), $joining, $touch);
+            } else {
+                $this->attach($instance, $joining, $touch);
+            }
+        }
+
+        $instance->fill($values);
+
+        $instance->save(['touch' => false]);
+
+        return $instance;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**

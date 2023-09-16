@@ -128,10 +128,13 @@ if (!function_exists('mb_str_split')) {
     function mb_str_split(?string $string, ?int $length = 1, ?string $encoding = null): array { return p\Mbstring::mb_str_split((string) $string, (int) $length, $encoding); }
 }
 
+<<<<<<< HEAD
 if (!function_exists('mb_str_pad')) {
     function mb_str_pad(string $string, int $length, string $pad_string = ' ', int $pad_type = STR_PAD_RIGHT, ?string $encoding = null): string { return p\Mbstring::mb_str_pad($string, $length, $pad_string, $pad_type, $encoding); }
 }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 if (extension_loaded('mbstring')) {
     return;
 }

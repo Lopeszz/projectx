@@ -140,9 +140,15 @@ final class AppendStream implements StreamInterface
 
     public function eof(): bool
     {
+<<<<<<< HEAD
         return !$this->streams
             || ($this->current >= count($this->streams) - 1
              && $this->streams[$this->current]->eof());
+=======
+        return !$this->streams ||
+            ($this->current >= count($this->streams) - 1 &&
+             $this->streams[$this->current]->eof());
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     public function rewind(): void
@@ -239,6 +245,11 @@ final class AppendStream implements StreamInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return mixed
      */
     public function getMetadata($key = null)

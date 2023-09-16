@@ -68,10 +68,13 @@ final class Configuration
     private readonly bool $outputToStandardErrorStream;
     private readonly int $columns;
     private readonly bool $noExtensions;
+<<<<<<< HEAD
 
     /**
      * @psalm-var ?non-empty-string
      */
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     private readonly ?string $pharExtensionDirectory;
 
     /**
@@ -127,7 +130,11 @@ final class Configuration
     private readonly ?string $defaultTestSuite;
 
     /**
+<<<<<<< HEAD
      * @psalm-var non-empty-list<non-empty-string>
+=======
+     * @psalm-var non-empty-list<string>
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     private readonly array $testSuffixes;
     private readonly Php $php;
@@ -135,8 +142,12 @@ final class Configuration
     private readonly int $numberOfTestsBeforeGarbageCollection;
 
     /**
+<<<<<<< HEAD
      * @psalm-param ?non-empty-string $pharExtensionDirectory
      * @psalm-param non-empty-list<non-empty-string> $testSuffixes
+=======
+     * @psalm-param non-empty-list<string> $testSuffixes
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @psalm-param list<array{className: class-string, parameters: array<string, string>}> $extensionBootstrappers
      */
     public function __construct(?string $cliArgument, ?string $configurationFile, ?string $bootstrap, bool $cacheResult, ?string $cacheDirectory, ?string $coverageCacheDirectory, Source $source, string $testResultCacheFile, ?string $coverageClover, ?string $coverageCobertura, ?string $coverageCrap4j, int $coverageCrap4jThreshold, ?string $coverageHtml, int $coverageHtmlLowUpperBound, int $coverageHtmlHighLowerBound, string $coverageHtmlColorSuccessLow, string $coverageHtmlColorSuccessMedium, string $coverageHtmlColorSuccessHigh, string $coverageHtmlColorWarning, string $coverageHtmlColorDanger, ?string $coverageHtmlCustomCssFile, ?string $coveragePhp, ?string $coverageText, bool $coverageTextShowUncoveredFiles, bool $coverageTextShowOnlySummary, ?string $coverageXml, bool $pathCoverage, bool $ignoreDeprecatedCodeUnitsFromCodeCoverage, bool $disableCodeCoverageIgnore, bool $failOnDeprecation, bool $failOnEmptyTestSuite, bool $failOnIncomplete, bool $failOnNotice, bool $failOnRisky, bool $failOnSkipped, bool $failOnWarning, bool $stopOnDefect, bool $stopOnDeprecation, bool $stopOnError, bool $stopOnFailure, bool $stopOnIncomplete, bool $stopOnNotice, bool $stopOnRisky, bool $stopOnSkipped, bool $stopOnWarning, bool $outputToStandardErrorStream, int|string $columns, bool $noExtensions, ?string $pharExtensionDirectory, array $extensionBootstrappers, bool $backupGlobals, bool $backupStaticProperties, bool $beStrictAboutChangesToGlobalState, bool $colors, bool $processIsolation, bool $enforceTimeLimit, int $defaultTimeLimit, int $timeoutForSmallTests, int $timeoutForMediumTests, int $timeoutForLargeTests, bool $reportUselessTests, bool $strictCoverage, bool $disallowTestOutput, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $reverseDefectList, bool $requireCoverageMetadata, bool $registerMockObjectsFromTestArgumentsRecursively, bool $noProgress, bool $noResults, bool $noOutput, int $executionOrder, int $executionOrderDefects, bool $resolveDependencies, ?string $logfileTeamcity, ?string $logfileJunit, ?string $logfileTestdoxHtml, ?string $logfileTestdoxText, ?string $logEventsText, ?string $logEventsVerboseText, bool $teamCityOutput, bool $testDoxOutput, ?array $testsCovering, ?array $testsUsing, ?string $filter, ?array $groups, ?array $excludeGroups, int $randomOrderSeed, bool $includeUncoveredFiles, TestSuiteCollection $testSuite, string $includeTestSuite, string $excludeTestSuite, ?string $defaultTestSuite, array $testSuffixes, Php $php, bool $controlGarbageCollector, int $numberOfTestsBeforeGarbageCollection)
@@ -771,8 +782,11 @@ final class Configuration
     }
 
     /**
+<<<<<<< HEAD
      * @psalm-return non-empty-string
      *
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @throws NoPharExtensionDirectoryException
      */
     public function pharExtensionDirectory(): string
@@ -1212,7 +1226,11 @@ final class Configuration
     }
 
     /**
+<<<<<<< HEAD
      * @psalm-return non-empty-list<non-empty-string>
+=======
+     * @psalm-return non-empty-list<string>
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function testSuffixes(): array
     {

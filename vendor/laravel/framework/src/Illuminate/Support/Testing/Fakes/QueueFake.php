@@ -44,6 +44,7 @@ class QueueFake extends QueueManager implements Fake, Queue
     protected $jobs = [];
 
     /**
+<<<<<<< HEAD
      * Indicates if items should be serialized and restored when pushed to the queue.
      *
      * @var bool
@@ -51,6 +52,8 @@ class QueueFake extends QueueManager implements Fake, Queue
     protected bool $serializeAndRestore = false;
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create a new fake queue instance.
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
@@ -359,7 +362,11 @@ class QueueFake extends QueueManager implements Fake, Queue
             }
 
             $this->jobs[is_object($job) ? get_class($job) : $job][] = [
+<<<<<<< HEAD
                 'job' =>  $this->serializeAndRestore ? $this->serializeAndRestoreJob($job) : $job,
+=======
+                'job' => $job,
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 'queue' => $queue,
                 'data' => $data,
             ];
@@ -499,6 +506,7 @@ class QueueFake extends QueueManager implements Fake, Queue
     }
 
     /**
+<<<<<<< HEAD
      * Specify if jobs should be serialized and restored when being "pushed" to the queue.
      *
      * @param  bool  $serializeAndRestore
@@ -523,6 +531,8 @@ class QueueFake extends QueueManager implements Fake, Queue
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the connection name for the queue.
      *
      * @return string

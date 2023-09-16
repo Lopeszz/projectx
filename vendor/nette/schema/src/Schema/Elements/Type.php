@@ -112,8 +112,13 @@ final class Type implements Schema
 
 	public function normalize($value, Context $context)
 	{
+<<<<<<< HEAD
 		if ($prevent = (is_array($value) && isset($value[Helpers::PreventMerging]))) {
 			unset($value[Helpers::PreventMerging]);
+=======
+		if ($prevent = (is_array($value) && isset($value[Helpers::PREVENT_MERGING]))) {
+			unset($value[Helpers::PREVENT_MERGING]);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 		}
 
 		$value = $this->doNormalize($value, $context);
@@ -134,7 +139,11 @@ final class Type implements Schema
 		}
 
 		if ($prevent && is_array($value)) {
+<<<<<<< HEAD
 			$value[Helpers::PreventMerging] = true;
+=======
+			$value[Helpers::PREVENT_MERGING] = true;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 		}
 
 		return $value;
@@ -143,8 +152,13 @@ final class Type implements Schema
 
 	public function merge($value, $base)
 	{
+<<<<<<< HEAD
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
+=======
+		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
+			unset($value[Helpers::PREVENT_MERGING]);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			return $value;
 		}
 
@@ -171,8 +185,13 @@ final class Type implements Schema
 	public function complete($value, Context $context)
 	{
 		$merge = $this->merge;
+<<<<<<< HEAD
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
+=======
+		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
+			unset($value[Helpers::PREVENT_MERGING]);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			$merge = false;
 		}
 
@@ -191,7 +210,11 @@ final class Type implements Schema
 		if ($value !== null && $this->pattern !== null && !preg_match("\x01^(?:$this->pattern)$\x01Du", $value)) {
 			$context->addError(
 				"The %label% %path% expects to match pattern '%pattern%', %value% given.",
+<<<<<<< HEAD
 				Nette\Schema\Message::PatternMismatch,
+=======
+				Nette\Schema\Message::PATTERN_MISMATCH,
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 				['value' => $value, 'pattern' => $this->pattern]
 			);
 			return;

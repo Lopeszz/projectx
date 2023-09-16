@@ -3,9 +3,14 @@
 namespace Laravel\Prompts\Themes\Default;
 
 use Laravel\Prompts\SuggestPrompt;
+<<<<<<< HEAD
 use Laravel\Prompts\Themes\Contracts\Scrolling;
 
 class SuggestPromptRenderer extends Renderer implements Scrolling
+=======
+
+class SuggestPromptRenderer extends Renderer
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 {
     use Concerns\DrawsBoxes;
     use Concerns\DrawsScrollbars;
@@ -47,12 +52,17 @@ class SuggestPromptRenderer extends Renderer implements Scrolling
                     $this->valueWithCursorAndArrow($prompt, $maxWidth),
                     $this->renderOptions($prompt),
                 )
+<<<<<<< HEAD
                 ->when(
                     $prompt->hint,
                     fn () => $this->hint($prompt->hint),
                     fn () => $this->newLine() // Space for errors
                 )
                 ->spaceForDropdown($prompt),
+=======
+                ->spaceForDropdown($prompt)
+                ->newLine(), // Space for errors
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         };
     }
 
@@ -97,6 +107,7 @@ class SuggestPromptRenderer extends Renderer implements Scrolling
             return '';
         }
 
+<<<<<<< HEAD
         return $this->scrollbar(
             collect($prompt->visible())
                 ->map(fn ($label) => $this->truncate($label, $prompt->terminal()->cols() - 10))
@@ -107,10 +118,22 @@ class SuggestPromptRenderer extends Renderer implements Scrolling
             $prompt->firstVisible,
             $prompt->scroll,
             count($prompt->matches()),
+=======
+        return $this->scroll(
+            collect($prompt->matches())
+                ->map(fn ($label) => $this->truncate($label, $prompt->terminal()->cols() - 10))
+                ->map(fn ($label, $i) => $prompt->highlighted === $i
+                    ? "{$this->cyan('›')} {$label}  "
+                    : "  {$this->dim($label)}  "
+                ),
+            $prompt->highlighted,
+            min($prompt->scroll, $prompt->terminal()->lines() - 7),
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             min($this->longest($prompt->matches(), padding: 4), $prompt->terminal()->cols() - 6),
             $prompt->state === 'cancel' ? 'dim' : 'cyan'
         )->implode(PHP_EOL);
     }
+<<<<<<< HEAD
 
     /**
      * The number of lines to reserve outside of the scrollable area.
@@ -119,4 +142,6 @@ class SuggestPromptRenderer extends Renderer implements Scrolling
     {
         return 7;
     }
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

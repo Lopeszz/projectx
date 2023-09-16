@@ -22,7 +22,11 @@ trait HasUniqueIds
     }
 
     /**
+<<<<<<< HEAD
      * Generate unique keys for the model.
+=======
+     * Generate a unique keys for model.
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @return void
      */

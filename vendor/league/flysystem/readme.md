@@ -33,7 +33,10 @@ for which ever storage is right for you.
 * **[Google Cloud Storage](https://flysystem.thephpleague.com/docs/adapter/google-cloud-storage/)**
 * **[Azure Blob Storage](https://flysystem.thephpleague.com/docs/adapter/azure-blob-storage/)**
 * **[WebDAV](https://flysystem.thephpleague.com/docs/adapter/webdav/)**
+<<<<<<< HEAD
 * **[ZipArchive](https://flysystem.thephpleague.com/docs/adapter/zip-archive/)**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 ### Third party Adapters
 
@@ -44,7 +47,10 @@ for which ever storage is right for you.
 * **[OneDrive](https://github.com/doerffler/flysystem-onedrive)**
 * **[Dropbox](https://github.com/spatie/flysystem-dropbox)**
 * **[ReplicateAdapter](https://github.com/ajgarlag/flysystem-replicate)**
+<<<<<<< HEAD
 * **[Uploadcare](https://github.com/vormkracht10/flysystem-uploadcare)**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 You can always [create an adapter](https://flysystem.thephpleague.com/docs/advanced/creating-an-adapter/) yourself.
 

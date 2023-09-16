@@ -14,7 +14,10 @@ use Psr\Http\Message\ResponseInterface;
  * cookies from a file, database, etc.
  *
  * @see https://docs.python.org/2/library/cookielib.html Inspiration
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  * @extends \IteratorAggregate<SetCookie>
  */
 interface CookieJarInterface extends \Countable, \IteratorAggregate
@@ -62,7 +65,11 @@ interface CookieJarInterface extends \Countable, \IteratorAggregate
      * @param string|null $path   Clears cookies matching a domain and path
      * @param string|null $name   Clears cookies matching a domain, path, and name
      */
+<<<<<<< HEAD
     public function clear(string $domain = null, string $path = null, string $name = null): void;
+=======
+    public function clear(?string $domain = null, ?string $path = null, ?string $name = null): void;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * Discard all sessions cookies.

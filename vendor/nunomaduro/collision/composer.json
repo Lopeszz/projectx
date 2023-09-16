@@ -72,7 +72,11 @@
         "test:types": "phpstan analyse --ansi",
         "test:unit:phpunit": [
             "@putenv XDEBUG_MODE=coverage",
+<<<<<<< HEAD
             "phpunit --colors=always"
+=======
+            "phpunit --colors=always -v"
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ],
         "test:unit:pest": [
             "@putenv XDEBUG_MODE=coverage",

@@ -2310,7 +2310,10 @@ trait Date
                 'c' => true,
                 'r' => true,
                 'U' => true,
+<<<<<<< HEAD
                 'T' => true,
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             ];
         }
 

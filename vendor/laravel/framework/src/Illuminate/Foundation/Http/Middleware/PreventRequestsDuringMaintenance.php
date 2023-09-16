@@ -45,10 +45,13 @@ class PreventRequestsDuringMaintenance
      */
     public function handle($request, Closure $next)
     {
+<<<<<<< HEAD
         if ($this->inExceptArray($request)) {
             return $next($request);
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($this->app->maintenanceMode()->active()) {
             $data = $this->app->maintenanceMode()->data();
 
@@ -56,7 +59,12 @@ class PreventRequestsDuringMaintenance
                 return $this->bypassResponse($data['secret']);
             }
 
+<<<<<<< HEAD
             if ($this->hasValidBypassCookie($request, $data)) {
+=======
+            if ($this->hasValidBypassCookie($request, $data) ||
+                $this->inExceptArray($request)) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 return $next($request);
             }
 

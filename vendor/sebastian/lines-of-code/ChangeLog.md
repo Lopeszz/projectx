@@ -2,12 +2,15 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
 ## [2.0.1] - 2023-08-31
 
 ### Changed
 
 * Improved type information
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ## [2.0.0] - 2023-02-03
 
 ### Removed
@@ -40,7 +43,10 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * Initial release
 
+<<<<<<< HEAD
 [2.0.1]: https://github.com/sebastianbergmann/lines-of-code/compare/2.0.0...2.0.1
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 [2.0.0]: https://github.com/sebastianbergmann/lines-of-code/compare/1.0.3...2.0.0
 [1.0.3]: https://github.com/sebastianbergmann/lines-of-code/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/sebastianbergmann/lines-of-code/compare/1.0.1...1.0.2

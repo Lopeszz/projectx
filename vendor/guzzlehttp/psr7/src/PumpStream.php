@@ -34,7 +34,11 @@ final class PumpStream implements StreamInterface
     private $buffer;
 
     /**
+<<<<<<< HEAD
      * @param callable(int): (string|false|null)  $source  Source of the stream data. The callable MAY
+=======
+     * @param callable(int): (string|null|false)  $source  Source of the stream data. The callable MAY
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *                                                     accept an integer argument used to control the
      *                                                     amount of data to return. The callable MUST
      *                                                     return a string when called, or false|null on error
@@ -150,6 +154,11 @@ final class PumpStream implements StreamInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return mixed
      */
     public function getMetadata($key = null)

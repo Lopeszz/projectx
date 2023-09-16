@@ -31,10 +31,13 @@ use PHPUnit\Event\Test\PhpDeprecationTriggered;
 use PHPUnit\Event\Test\PhpDeprecationTriggeredSubscriber;
 use PHPUnit\Event\Test\PhpNoticeTriggered;
 use PHPUnit\Event\Test\PhpNoticeTriggeredSubscriber;
+<<<<<<< HEAD
 use PHPUnit\Event\Test\PhpunitDeprecationTriggered;
 use PHPUnit\Event\Test\PhpunitDeprecationTriggeredSubscriber;
 use PHPUnit\Event\Test\PhpunitErrorTriggered;
 use PHPUnit\Event\Test\PhpunitErrorTriggeredSubscriber;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use PHPUnit\Event\Test\PhpunitWarningTriggered;
 use PHPUnit\Event\Test\PhpunitWarningTriggeredSubscriber;
 use PHPUnit\Event\Test\PhpWarningTriggered;
@@ -193,6 +196,7 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
+<<<<<<< HEAD
                 new class($printer) extends Subscriber implements PhpunitDeprecationTriggeredSubscriber
                 {
                     public function notify(PhpunitDeprecationTriggered $event): void
@@ -201,6 +205,8 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 new class($printer) extends Subscriber implements PhpNoticeTriggeredSubscriber
                 {
                     public function notify(PhpNoticeTriggered $event): void
@@ -225,6 +231,7 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
+<<<<<<< HEAD
                 new class($printer) extends Subscriber implements PhpunitErrorTriggeredSubscriber
                 {
                     public function notify(PhpunitErrorTriggered $event): void
@@ -233,6 +240,8 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 // Test > Outcome ...
 
                 new class($printer) extends Subscriber implements ErroredSubscriber

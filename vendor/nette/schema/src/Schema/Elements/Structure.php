@@ -87,8 +87,13 @@ final class Structure implements Schema
 
 	public function normalize($value, Context $context)
 	{
+<<<<<<< HEAD
 		if ($prevent = (is_array($value) && isset($value[Helpers::PreventMerging]))) {
 			unset($value[Helpers::PreventMerging]);
+=======
+		if ($prevent = (is_array($value) && isset($value[Helpers::PREVENT_MERGING]))) {
+			unset($value[Helpers::PREVENT_MERGING]);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 		}
 
 		$value = $this->doNormalize($value, $context);
@@ -107,7 +112,11 @@ final class Structure implements Schema
 			}
 
 			if ($prevent) {
+<<<<<<< HEAD
 				$value[Helpers::PreventMerging] = true;
+=======
+				$value[Helpers::PREVENT_MERGING] = true;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			}
 		}
 
@@ -117,8 +126,13 @@ final class Structure implements Schema
 
 	public function merge($value, $base)
 	{
+<<<<<<< HEAD
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
+=======
+		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
+			unset($value[Helpers::PREVENT_MERGING]);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 			$base = null;
 		}
 
@@ -170,7 +184,11 @@ final class Structure implements Schema
 					$hint = Nette\Utils\ObjectHelpers::getSuggestion($keys, (string) $key);
 					$context->addError(
 						'Unexpected item %path%' . ($hint ? ", did you mean '%hint%'?" : '.'),
+<<<<<<< HEAD
 						Nette\Schema\Message::UnexpectedItem,
+=======
+						Nette\Schema\Message::UNEXPECTED_ITEM,
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 						['hint' => $hint]
 					)->path[] = $key;
 				}

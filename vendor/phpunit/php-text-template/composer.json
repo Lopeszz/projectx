@@ -15,8 +15,12 @@
         }
     ],
     "support": {
+<<<<<<< HEAD
         "issues": "https://github.com/sebastianbergmann/php-text-template/issues",
         "security": "https://github.com/sebastianbergmann/php-text-template/security/policy"
+=======
+        "issues": "https://github.com/sebastianbergmann/php-text-template/issues"
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     },
     "config": {
         "platform": {

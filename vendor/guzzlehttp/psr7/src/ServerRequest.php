@@ -286,6 +286,11 @@ class ServerRequest extends Request implements ServerRequestInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return array|object|null
      */
     public function getParsedBody()
@@ -307,6 +312,11 @@ class ServerRequest extends Request implements ServerRequestInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return mixed
      */
     public function getAttribute($attribute, $default = null)

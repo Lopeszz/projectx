@@ -502,7 +502,11 @@ trait HasRelationships
      * Define a many-to-many relationship.
      *
      * @param  string  $related
+<<<<<<< HEAD
      * @param  string|class-string<\Illuminate\Database\Eloquent\Model>|null  $table
+=======
+     * @param  string|null  $table
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @param  string|null  $foreignPivotKey
      * @param  string|null  $relatedPivotKey
      * @param  string|null  $parentKey
@@ -548,7 +552,11 @@ trait HasRelationships
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
+<<<<<<< HEAD
      * @param  string|class-string<\Illuminate\Database\Eloquent\Model>  $table
+=======
+     * @param  string  $table
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @param  string  $foreignPivotKey
      * @param  string  $relatedPivotKey
      * @param  string  $parentKey

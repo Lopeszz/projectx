@@ -12,10 +12,15 @@ namespace SebastianBergmann\CodeCoverage\Report\Html;
 use function count;
 use function sprintf;
 use function str_repeat;
+<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\AbstractNode as Node;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\Template\Exception;
+=======
+use SebastianBergmann\CodeCoverage\Node\AbstractNode as Node;
+use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use SebastianBergmann\Template\Template;
 
 /**
@@ -47,6 +52,7 @@ final class Directory extends Renderer
             ]
         );
 
+<<<<<<< HEAD
         try {
             $template->renderTo($file);
         } catch (Exception $e) {
@@ -56,6 +62,9 @@ final class Directory extends Renderer
                 $e
             );
         }
+=======
+        $template->renderTo($file);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     private function renderItem(Node $node, bool $total = false): string

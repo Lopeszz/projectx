@@ -3,7 +3,10 @@
 namespace Laravel\Prompts\Concerns;
 
 use Closure;
+<<<<<<< HEAD
 use RuntimeException;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 trait Fallback
 {
@@ -50,11 +53,15 @@ trait Fallback
      */
     public function fallback(): mixed
     {
+<<<<<<< HEAD
         $fallback = static::$fallbacks[static::class] ?? null;
 
         if ($fallback === null) {
             throw new RuntimeException('No fallback implementation registered for ['.static::class.']');
         }
+=======
+        $fallback = static::$fallbacks[static::class];
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         return $fallback($this);
     }

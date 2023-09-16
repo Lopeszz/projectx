@@ -324,7 +324,10 @@ abstract class Component
         return array_merge([
             'data',
             'render',
+<<<<<<< HEAD
             'resolve',
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             'resolveView',
             'shouldRender',
             'view',

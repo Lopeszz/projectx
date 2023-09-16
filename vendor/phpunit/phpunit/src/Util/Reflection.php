@@ -52,7 +52,11 @@ final class Reflection
      */
     public static function publicMethodsInTestClass(ReflectionClass $class): array
     {
+<<<<<<< HEAD
         return self::filterAndSortMethods($class, ReflectionMethod::IS_PUBLIC, true);
+=======
+        return self::filterMethods($class, ReflectionMethod::IS_PUBLIC);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
@@ -60,13 +64,21 @@ final class Reflection
      */
     public static function methodsInTestClass(ReflectionClass $class): array
     {
+<<<<<<< HEAD
         return self::filterAndSortMethods($class, null, false);
+=======
+        return self::filterMethods($class, null);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     /**
      * @psalm-return list<ReflectionMethod>
      */
+<<<<<<< HEAD
     private static function filterAndSortMethods(ReflectionClass $class, ?int $filter, bool $sortHighestToLowest): array
+=======
+    private static function filterMethods(ReflectionClass $class, ?int $filter): array
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $methodsByClass = [];
 
@@ -88,6 +100,7 @@ final class Reflection
             $methodsByClass[$declaringClassName][] = $method;
         }
 
+<<<<<<< HEAD
         $classNames = array_keys($methodsByClass);
 
         if ($sortHighestToLowest) {
@@ -97,6 +110,11 @@ final class Reflection
         $methods = [];
 
         foreach ($classNames as $className) {
+=======
+        $methods = [];
+
+        foreach (array_reverse(array_keys($methodsByClass)) as $className) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             $methods = array_merge($methods, $methodsByClass[$className]);
         }
 

@@ -305,15 +305,25 @@ abstract class Queue
             $this->container->bound('db.transactions')) {
             return $this->container->make('db.transactions')->addCallback(
                 function () use ($payload, $queue, $delay, $callback, $job) {
+<<<<<<< HEAD
                     return tap($callback($payload, $queue, $delay), function ($jobId) use ($job, $payload) {
                         $this->raiseJobQueuedEvent($jobId, $job, $payload);
+=======
+                    return tap($callback($payload, $queue, $delay), function ($jobId) use ($job) {
+                        $this->raiseJobQueuedEvent($jobId, $job);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     });
                 }
             );
         }
 
+<<<<<<< HEAD
         return tap($callback($payload, $queue, $delay), function ($jobId) use ($job, $payload) {
             $this->raiseJobQueuedEvent($jobId, $job, $payload);
+=======
+        return tap($callback($payload, $queue, $delay), function ($jobId) use ($job) {
+            $this->raiseJobQueuedEvent($jobId, $job);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         });
     }
 
@@ -341,6 +351,7 @@ abstract class Queue
      *
      * @param  string|int|null  $jobId
      * @param  \Closure|string|object  $job
+<<<<<<< HEAD
      * @param  string  $payload
      * @return void
      */
@@ -348,6 +359,14 @@ abstract class Queue
     {
         if ($this->container->bound('events')) {
             $this->container['events']->dispatch(new JobQueued($this->connectionName, $jobId, $job, $payload));
+=======
+     * @return void
+     */
+    protected function raiseJobQueuedEvent($jobId, $job)
+    {
+        if ($this->container->bound('events')) {
+            $this->container['events']->dispatch(new JobQueued($this->connectionName, $jobId, $job));
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
     }
 

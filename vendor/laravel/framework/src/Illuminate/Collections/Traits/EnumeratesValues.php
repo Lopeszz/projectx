@@ -482,6 +482,7 @@ trait EnumeratesValues
     }
 
     /**
+<<<<<<< HEAD
      * Calculate the percentage of items that pass a given truth test.
      *
      * @param  (callable(TValue, TKey): bool)  $callback
@@ -501,6 +502,8 @@ trait EnumeratesValues
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the sum of the given values.
      *
      * @param  (callable(TValue): mixed)|string|null  $callback

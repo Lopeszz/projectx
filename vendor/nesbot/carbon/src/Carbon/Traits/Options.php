@@ -422,7 +422,11 @@ trait Options
         foreach ($map as $property => $key) {
             $value = $this->$property ?? null;
 
+<<<<<<< HEAD
             if ($value !== null && ($key !== 'locale' || $value !== 'en' || $this->localTranslator)) {
+=======
+            if ($value !== null) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $settings[$key] = $value;
             }
         }
@@ -437,7 +441,11 @@ trait Options
      */
     public function __debugInfo()
     {
+<<<<<<< HEAD
         $infos = array_filter(get_object_vars($this), static function ($var) {
+=======
+        $infos = array_filter(get_object_vars($this), function ($var) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             return $var;
         });
 

@@ -40,8 +40,11 @@ final class Counter
             $linesOfCode = 1;
         }
 
+<<<<<<< HEAD
         assert($linesOfCode >= 0);
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         try {
             $nodes = $this->parser()->parse($source);
 
@@ -54,15 +57,22 @@ final class Counter
             throw new RuntimeException(
                 $error->getMessage(),
                 $error->getCode(),
+<<<<<<< HEAD
                 $error,
+=======
+                $error
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
         // @codeCoverageIgnoreEnd
     }
 
     /**
+<<<<<<< HEAD
      * @psalm-param non-negative-int $linesOfCode
      *
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @param Node[] $nodes
      *
      * @throws RuntimeException
@@ -82,7 +92,11 @@ final class Counter
             throw new RuntimeException(
                 $error->getMessage(),
                 $error->getCode(),
+<<<<<<< HEAD
                 $error,
+=======
+                $error
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
         // @codeCoverageIgnoreEnd

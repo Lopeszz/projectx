@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 /*
  * This file is part of the Symfony package.
  *
@@ -9,6 +10,8 @@
  * file that was distributed with this source code.
  */
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 namespace Symfony\Polyfill\Intl\Idn\Resources\unidata;
 
 /**

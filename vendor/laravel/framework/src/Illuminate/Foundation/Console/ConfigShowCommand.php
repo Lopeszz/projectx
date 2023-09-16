@@ -32,14 +32,24 @@ class ConfigShowCommand extends Command
     {
         $config = $this->argument('config');
 
+<<<<<<< HEAD
         if (! config()->has($config)) {
+=======
+        $data = config($config);
+
+        if (! $data) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             $this->components->error("Configuration file `{$config}` does not exist.");
 
             return Command::FAILURE;
         }
 
         $this->newLine();
+<<<<<<< HEAD
         $this->render($config);
+=======
+        $this->render($config, $data);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $this->newLine();
 
         return Command::SUCCESS;
@@ -49,12 +59,20 @@ class ConfigShowCommand extends Command
      * Render the configuration values.
      *
      * @param  string  $name
+<<<<<<< HEAD
      * @return void
      */
     public function render($name)
     {
         $data = config($name);
 
+=======
+     * @param  mixed  $data
+     * @return void
+     */
+    public function render($name, $data)
+    {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if (! is_array($data)) {
             $this->title($name, $this->formatValue($data));
 

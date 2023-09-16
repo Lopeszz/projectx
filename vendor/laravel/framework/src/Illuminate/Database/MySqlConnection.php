@@ -2,7 +2,10 @@
 
 namespace Illuminate\Database;
 
+<<<<<<< HEAD
 use Exception;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Illuminate\Database\PDO\MySqlDriver;
 use Illuminate\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
 use Illuminate\Database\Query\Processors\MySqlProcessor;
@@ -28,6 +31,7 @@ class MySqlConnection extends Connection
     }
 
     /**
+<<<<<<< HEAD
      * Determine if the given database exception was caused by a unique constraint violation.
      *
      * @param  \Exception  $exception
@@ -39,6 +43,8 @@ class MySqlConnection extends Connection
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Determine if the connected database is a MariaDB database.
      *
      * @return bool

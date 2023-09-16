@@ -1035,7 +1035,11 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      *
      * @param  TValue|(callable(TValue,TKey): bool)  $value
      * @param  bool  $strict
+<<<<<<< HEAD
      * @return TKey|false
+=======
+     * @return TKey|bool
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     public function search($value, $strict = false)
     {

@@ -32,7 +32,11 @@
         "myclabs/deep-copy": "^1.10.1",
         "phar-io/manifest": "^2.0.3",
         "phar-io/version": "^3.0.2",
+<<<<<<< HEAD
         "phpunit/php-code-coverage": "^10.1.5",
+=======
+        "phpunit/php-code-coverage": "^10.1.1",
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "phpunit/php-file-iterator": "^4.0",
         "phpunit/php-invoker": "^4.0",
         "phpunit/php-text-template": "^3.0",

@@ -299,6 +299,13 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         return new ReturnSelfStub;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @deprecated Use <code>$double->willThrowException()</code> instead of <code>$double->will($this->throwException())</code>
+     * @see https://github.com/sebastianbergmann/phpunit/issues/5423
+     */
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     final public static function throwException(Throwable $exception): ExceptionStub
     {
         return new ExceptionStub($exception);

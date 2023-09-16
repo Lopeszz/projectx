@@ -45,7 +45,10 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
 use PHPUnit\Metadata\TestDox;
 use PHPUnit\Util\Color;
+<<<<<<< HEAD
 use ReflectionEnum;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use ReflectionMethod;
 use ReflectionObject;
 use SebastianBergmann\Exporter\Exporter;
@@ -242,6 +245,7 @@ final class NamePrettifier
                 $reflector = new ReflectionObject($value);
 
                 if ($reflector->isEnum()) {
+<<<<<<< HEAD
                     $enumReflector = new ReflectionEnum($value);
 
                     if ($enumReflector->isBacked()) {
@@ -249,6 +253,9 @@ final class NamePrettifier
                     } else {
                         $value = $value->name;
                     }
+=======
+                    $value = $value->value;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 } elseif ($reflector->hasMethod('__toString')) {
                     $value = (string) $value;
                 } else {
@@ -280,10 +287,14 @@ final class NamePrettifier
         }
 
         if ($colorize) {
+<<<<<<< HEAD
             $providedData = array_map(
                 static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)),
                 $providedData,
             );
+=======
+            $providedData = array_map(static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)), $providedData);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         return $providedData;

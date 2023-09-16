@@ -727,6 +727,7 @@ if (! function_exists('rescue')) {
     /**
      * Catch a potential exception and return a default value.
      *
+<<<<<<< HEAD
      * @template TRescueValue
      * @template TRescueFallback
      *
@@ -734,6 +735,12 @@ if (! function_exists('rescue')) {
      * @param  (callable(\Throwable): TRescueFallback)|TRescueFallback  $rescue
      * @param  bool|callable  $report
      * @return TRescueValue|TRescueFallback
+=======
+     * @param  callable  $callback
+     * @param  mixed  $rescue
+     * @param  bool|callable  $report
+     * @return mixed
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      */
     function rescue(callable $callback, $rescue = null, $report = true)
     {

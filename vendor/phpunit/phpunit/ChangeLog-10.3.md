@@ -2,6 +2,7 @@
 
 All notable changes of the PHPUnit 10.3 release series are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
 ## [10.3.4] - 2023-09-12
 
 ### Changed
@@ -24,6 +25,8 @@ All notable changes of the PHPUnit 10.3 release series are documented in this fi
 * [#5425](https://github.com/sebastianbergmann/phpunit/issues/5425): `InvocationMocker::willReturnOnConsecutiveCalls()` is no longer deprecated
 * [#5444](https://github.com/sebastianbergmann/phpunit/issues/5444): `MockBuilder::setMockClassName()` is no longer deprecated
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ## [10.3.1] - 2023-08-04
 
 ### Fixed
@@ -47,6 +50,7 @@ All notable changes of the PHPUnit 10.3 release series are documented in this fi
 * `TestCase::createStub()`, `TestCase::createStubForIntersectionOfInterfaces()`, and `TestCase::createConfiguredStub()` are now static (and can be used from static data provider methods)
 * The internal methods `__phpunit_*()` have been removed from the `Stub` and `MockObject` interfaces
 
+<<<<<<< HEAD
 # Deprecated
 
 * [#5214](https://github.com/sebastianbergmann/phpunit/issues/5214): Deprecate `TestCase::iniSet()` (this method only has a `@deprecated` annotation for now; using this method will trigger a deprecation warning in PHPUnit 11; this method will be removed in PHPUnit 12)
@@ -56,12 +60,17 @@ All notable changes of the PHPUnit 10.3 release series are documented in this fi
 * [#5425](https://github.com/sebastianbergmann/phpunit/issues/5425): Deprecate `InvocationMocker::willReturnOnConsecutiveCalls()` (this method only has a `@deprecated` annotation for now; using this method will trigger a deprecation warning in PHPUnit 11; this method will be removed in PHPUnit 12)
 * [#5444](https://github.com/sebastianbergmann/phpunit/issues/5444): Deprecate `MockBuilder::setMockClassName()` (this method only has a `@deprecated` annotation for now; using this method will trigger a deprecation warning in PHPUnit 11; this method will be removed in PHPUnit 12)
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 ### Fixed
 
 * [#5456](https://github.com/sebastianbergmann/phpunit/issues/5456): Risky Test Check for Output Buffering is performed before after-test methods are called
 
+<<<<<<< HEAD
 [10.3.4]: https://github.com/sebastianbergmann/phpunit/compare/10.3.3...10.3.4
 [10.3.3]: https://github.com/sebastianbergmann/phpunit/compare/10.3.2...10.3.3
 [10.3.2]: https://github.com/sebastianbergmann/phpunit/compare/10.3.1...10.3.2
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 [10.3.1]: https://github.com/sebastianbergmann/phpunit/compare/10.3.0...10.3.1
 [10.3.0]: https://github.com/sebastianbergmann/phpunit/compare/10.2.7...10.3.0

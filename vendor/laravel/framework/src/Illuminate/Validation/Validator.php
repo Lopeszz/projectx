@@ -296,6 +296,7 @@ class Validator implements ValidatorContract
     protected $exception = ValidationException::class;
 
     /**
+<<<<<<< HEAD
      * The custom callback to determine if an exponent is within allowed range.
      *
      * @var callable|null
@@ -303,6 +304,8 @@ class Validator implements ValidatorContract
     protected $ensureExponentWithinAllowedRangeUsing;
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Create a new Validator instance.
      *
      * @param  \Illuminate\Contracts\Translation\Translator  $translator
@@ -437,6 +440,11 @@ class Validator implements ValidatorContract
                 $this->validateAttribute($attribute, $rule);
 
                 if ($this->shouldBeExcluded($attribute)) {
+<<<<<<< HEAD
+=======
+                    $this->removeAttribute($attribute);
+
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     break;
                 }
 
@@ -446,12 +454,15 @@ class Validator implements ValidatorContract
             }
         }
 
+<<<<<<< HEAD
         foreach ($this->rules as $attribute => $rules) {
             if ($this->shouldBeExcluded($attribute)) {
                 $this->removeAttribute($attribute);
             }
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         // Here we will spin through all of the "after" hooks on this validator and
         // fire them off. This gives the callbacks a chance to perform all kinds
         // of other validation that needs to get wrapped up in this operation.
@@ -1503,6 +1514,7 @@ class Validator implements ValidatorContract
     }
 
     /**
+<<<<<<< HEAD
      * Ensure exponents are within range using the given callback.
      *
      * @param  callable(int $scale, string $attribute, mixed $value)  $callback
@@ -1516,6 +1528,8 @@ class Validator implements ValidatorContract
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the Translator implementation.
      *
      * @return \Illuminate\Contracts\Translation\Translator

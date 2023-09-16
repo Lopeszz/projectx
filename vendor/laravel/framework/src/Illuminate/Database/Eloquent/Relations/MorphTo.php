@@ -351,6 +351,7 @@ class MorphTo extends BelongsTo
     }
 
     /**
+<<<<<<< HEAD
      * Indicate that soft deleted models should be included in the results.
      *
      * @return $this
@@ -402,6 +403,8 @@ class MorphTo extends BelongsTo
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Replay stored macro calls on the actual related instance.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query

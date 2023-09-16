@@ -205,6 +205,7 @@ final class CodeCoverage
             return;
         }
 
+<<<<<<< HEAD
         if ($configuration->hasCoveragePhp()) {
             $this->codeCoverageGenerationStart($printer, 'PHP');
 
@@ -220,6 +221,8 @@ final class CodeCoverage
             }
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($configuration->hasCoverageClover()) {
             $this->codeCoverageGenerationStart($printer, 'Clover XML');
 
@@ -304,6 +307,24 @@ final class CodeCoverage
             }
         }
 
+<<<<<<< HEAD
+=======
+        if ($configuration->hasCoveragePhp()) {
+            $this->codeCoverageGenerationStart($printer, 'PHP');
+
+            try {
+                $writer = new PhpReport;
+                $writer->process($this->codeCoverage(), $configuration->coveragePhp());
+
+                $this->codeCoverageGenerationSucceeded($printer);
+
+                unset($writer);
+            } catch (CodeCoverageException $e) {
+                $this->codeCoverageGenerationFailed($printer, $e);
+            }
+        }
+
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($configuration->hasCoverageText()) {
             $processor = new TextReport(
                 Thresholds::default(),

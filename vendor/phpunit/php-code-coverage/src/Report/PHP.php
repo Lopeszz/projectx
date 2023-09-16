@@ -21,8 +21,11 @@ final class PHP
 {
     public function process(CodeCoverage $coverage, ?string $target = null): string
     {
+<<<<<<< HEAD
         $coverage->clearCache();
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $buffer = "<?php
 return \unserialize(<<<'END_OF_COVERAGE_SERIALIZATION'" . PHP_EOL . serialize($coverage) . PHP_EOL . 'END_OF_COVERAGE_SERIALIZATION' . PHP_EOL . ');';
 

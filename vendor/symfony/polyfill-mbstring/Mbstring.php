@@ -69,7 +69,11 @@ final class Mbstring
 {
     public const MB_CASE_FOLD = \PHP_INT_MAX;
 
+<<<<<<< HEAD
     private const SIMPLE_CASE_FOLD = [
+=======
+    private const CASE_FOLD = [
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ['µ', 'ſ', "\xCD\x85", 'ς', "\xCF\x90", "\xCF\x91", "\xCF\x95", "\xCF\x96", "\xCF\xB0", "\xCF\xB1", "\xCF\xB5", "\xE1\xBA\x9B", "\xE1\xBE\xBE"],
         ['μ', 's', 'ι',        'σ', 'β',        'θ',        'φ',        'π',        'κ',        'ρ',        'ε',        "\xE1\xB9\xA1", 'ι'],
     ];
@@ -301,11 +305,15 @@ final class Mbstring
                 $map = $upper;
             } else {
                 if (self::MB_CASE_FOLD === $mode) {
+<<<<<<< HEAD
                     static $caseFolding = null;
                     if (null === $caseFolding) {
                         $caseFolding = self::getData('caseFolding');
                     }
                     $s = strtr($s, $caseFolding);
+=======
+                    $s = str_replace(self::CASE_FOLD[0], self::CASE_FOLD[1], $s);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 }
 
                 static $lower = null;
@@ -410,12 +418,15 @@ final class Mbstring
 
     public static function mb_check_encoding($var = null, $encoding = null)
     {
+<<<<<<< HEAD
         if (PHP_VERSION_ID < 70200 && \is_array($var)) {
             trigger_error('mb_check_encoding() expects parameter 1 to be string, array given', \E_USER_WARNING);
 
             return null;
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if (null === $encoding) {
             if (null === $var) {
                 return false;
@@ -423,6 +434,7 @@ final class Mbstring
             $encoding = self::$internalEncoding;
         }
 
+<<<<<<< HEAD
         if (!\is_array($var)) {
             return self::mb_detect_encoding($var, [$encoding]) || false !== @iconv($encoding, $encoding, $var);
         }
@@ -438,6 +450,9 @@ final class Mbstring
 
         return true;
 
+=======
+        return self::mb_detect_encoding($var, [$encoding]) || false !== @iconv($encoding, $encoding, $var);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 
     public static function mb_detect_encoding($str, $encodingList = null, $strict = false)
@@ -662,10 +677,15 @@ final class Mbstring
 
     public static function mb_stripos($haystack, $needle, $offset = 0, $encoding = null)
     {
+<<<<<<< HEAD
         [$haystack, $needle] = str_replace(self::SIMPLE_CASE_FOLD[0], self::SIMPLE_CASE_FOLD[1], [
             self::mb_convert_case($haystack, \MB_CASE_LOWER, $encoding),
             self::mb_convert_case($needle, \MB_CASE_LOWER, $encoding),
         ]);
+=======
+        $haystack = self::mb_convert_case($haystack, self::MB_CASE_FOLD, $encoding);
+        $needle = self::mb_convert_case($needle, self::MB_CASE_FOLD, $encoding);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         return self::mb_strpos($haystack, $needle, $offset, $encoding);
     }
@@ -700,11 +720,16 @@ final class Mbstring
 
     public static function mb_strripos($haystack, $needle, $offset = 0, $encoding = null)
     {
+<<<<<<< HEAD
         $haystack = self::mb_convert_case($haystack, \MB_CASE_LOWER, $encoding);
         $needle = self::mb_convert_case($needle, \MB_CASE_LOWER, $encoding);
 
         $haystack = str_replace(self::SIMPLE_CASE_FOLD[0], self::SIMPLE_CASE_FOLD[1], $haystack);
         $needle = str_replace(self::SIMPLE_CASE_FOLD[0], self::SIMPLE_CASE_FOLD[1], $needle);
+=======
+        $haystack = self::mb_convert_case($haystack, self::MB_CASE_FOLD, $encoding);
+        $needle = self::mb_convert_case($needle, self::MB_CASE_FOLD, $encoding);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         return self::mb_strrpos($haystack, $needle, $offset, $encoding);
     }
@@ -827,6 +852,7 @@ final class Mbstring
         return $code;
     }
 
+<<<<<<< HEAD
     public static function mb_str_pad(string $string, int $length, string $pad_string = ' ', int $pad_type = \STR_PAD_RIGHT, string $encoding = null): string
     {
         if (!\in_array($pad_type, [\STR_PAD_RIGHT, \STR_PAD_LEFT, \STR_PAD_BOTH], true)) {
@@ -871,6 +897,8 @@ final class Mbstring
         }
     }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     private static function getSubpart($pos, $part, $haystack, $encoding)
     {
         if (false === $pos) {

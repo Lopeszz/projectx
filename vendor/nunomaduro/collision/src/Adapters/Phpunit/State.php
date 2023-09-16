@@ -23,7 +23,11 @@ final class State
     /**
      * The current test case class.
      */
+<<<<<<< HEAD
     public ?string $testCaseName;
+=======
+    public string|null $testCaseName;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * The current test case tests.

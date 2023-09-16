@@ -46,7 +46,10 @@
         "symfony/polyfill-php80": "^1.17"
     },
     "require-dev": {
+<<<<<<< HEAD
         "bamarni/composer-bin-plugin": "^1.8.1",
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "phpunit/phpunit" : "^8.5.19 || ^9.5.8",
         "uri-template/tests": "1.0.0"
     },
@@ -60,10 +63,19 @@
             "GuzzleHttp\\UriTemplate\\Tests\\": "tests"
         }
     },
+<<<<<<< HEAD
     "config": {
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
         },
+=======
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         "preferred-install": "dist",
         "sort-packages": true
     }

@@ -51,6 +51,7 @@ class Str
     protected static $uuidFactory;
 
     /**
+<<<<<<< HEAD
      * The callback that should be used to generate ULIDs.
      *
      * @var callable|null
@@ -58,6 +59,8 @@ class Str
     protected static $ulidFactory;
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * The callback that should be used to generate random strings.
      *
      * @var callable|null
@@ -292,6 +295,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
      * Convert the case of a string.
      *
      * @param  string  $string
@@ -305,6 +309,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Determine if a given string ends with a given substring.
      *
      * @param  string  $haystack
@@ -452,10 +458,13 @@ class Str
             return false;
         }
 
+<<<<<<< HEAD
         if (function_exists('json_validate')) {
             return json_validate($value, 512);
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         try {
             json_decode($value, true, 512, JSON_THROW_ON_ERROR);
         } catch (JsonException) {
@@ -1032,6 +1041,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
      * Replace the first occurrence of the given value if it appears at the start of the string.
      *
      * @param  string  $search
@@ -1055,6 +1065,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Replace the last occurrence of a given value in the string.
      *
      * @param  string  $search
@@ -1064,8 +1076,11 @@ class Str
      */
     public static function replaceLast($search, $replace, $subject)
     {
+<<<<<<< HEAD
         $search = (string) $search;
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($search === '') {
             return $subject;
         }
@@ -1080,6 +1095,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
      * Replace the last occurrence of a given value if it appears at the end of the string.
      *
      * @param  string  $search
@@ -1107,6 +1123,12 @@ class Str
      *
      * @param  string|iterable<string>  $search
      * @param  string|iterable<string>  $subject
+=======
+     * Remove any occurrence of the given string in the subject.
+     *
+     * @param  string|iterable<string>  $search
+     * @param  string  $subject
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @param  bool  $caseSensitive
      * @return string
      */
@@ -1418,6 +1440,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
      * Wrap a string to a given number of characters.
      *
      * @param  string  $string
@@ -1432,6 +1455,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Generate a UUID (version 4).
      *
      * @return \Ramsey\Uuid\UuidInterface
@@ -1554,10 +1579,13 @@ class Str
      */
     public static function ulid($time = null)
     {
+<<<<<<< HEAD
         if (static::$ulidFactory) {
             return call_user_func(static::$ulidFactory);
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         if ($time === null) {
             return new Ulid();
         }
@@ -1566,6 +1594,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
      * Indicate that ULIDs should be created normally and not using a custom factory.
      *
      * @return void
@@ -1644,6 +1673,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Remove all strings from the casing caches.
      *
      * @return void

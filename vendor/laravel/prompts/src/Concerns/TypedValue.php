@@ -17,6 +17,21 @@ trait TypedValue
     protected int $cursorPosition = 0;
 
     /**
+<<<<<<< HEAD
+=======
+     * Keys to ignore
+     *
+     * @var array<string>
+     */
+    protected array $ignore = [
+        Key::ENTER,
+        Key::TAB,
+        Key::CTRL_C,
+        Key::CTRL_D,
+    ];
+
+    /**
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Track the value as the user types.
      */
     protected function trackTypedValue(string $default = '', bool $submit = true): void
@@ -30,8 +45,13 @@ trait TypedValue
         $this->on('key', function ($key) use ($submit) {
             if ($key[0] === "\e") {
                 match ($key) {
+<<<<<<< HEAD
                     Key::LEFT, Key::LEFT_ARROW => $this->cursorPosition = max(0, $this->cursorPosition - 1),
                     Key::RIGHT, Key::RIGHT_ARROW => $this->cursorPosition = min(mb_strlen($this->typedValue), $this->cursorPosition + 1),
+=======
+                    Key::LEFT => $this->cursorPosition = max(0, $this->cursorPosition - 1),
+                    Key::RIGHT => $this->cursorPosition = min(mb_strlen($this->typedValue), $this->cursorPosition + 1),
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     Key::DELETE => $this->typedValue = mb_substr($this->typedValue, 0, $this->cursorPosition).mb_substr($this->typedValue, $this->cursorPosition + 1),
                     default => null,
                 };
@@ -52,7 +72,11 @@ trait TypedValue
 
                     $this->typedValue = mb_substr($this->typedValue, 0, $this->cursorPosition - 1).mb_substr($this->typedValue, $this->cursorPosition);
                     $this->cursorPosition--;
+<<<<<<< HEAD
                 } elseif (ord($key) >= 32) {
+=======
+                } elseif (! in_array($key, $this->ignore)) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     $this->typedValue = mb_substr($this->typedValue, 0, $this->cursorPosition).$key.mb_substr($this->typedValue, $this->cursorPosition);
                     $this->cursorPosition++;
                 }
@@ -73,6 +97,7 @@ trait TypedValue
      */
     protected function addCursor(string $value, int $cursorPosition, int $maxWidth): string
     {
+<<<<<<< HEAD
         $before = mb_substr($value, 0, $cursorPosition);
         $current = mb_substr($value, $cursorPosition, 1);
         $after = mb_substr($value, $cursorPosition + 1);
@@ -106,5 +131,32 @@ trait TypedValue
         $trimmed = mb_strimwidth($reversed, $start, $width);
 
         return implode('', array_reverse(mb_str_split($trimmed, 1)));
+=======
+        $offset = $cursorPosition - $maxWidth + ($cursorPosition < mb_strlen($value) ? 2 : 1);
+        $offset = $offset > 0 ? $offset + 1 : 0;
+        $offsetCursorPosition = $cursorPosition - $offset;
+
+        $output = $offset > 0 ? $this->dim('…') : '';
+        $output .= mb_substr($value, $offset, $offsetCursorPosition);
+
+        if ($cursorPosition > mb_strlen($value) - 1) {
+            return $output.$this->inverse(' ');
+        }
+
+        $output .= $this->inverse(mb_substr($value, $cursorPosition, 1));
+
+        if ($cursorPosition === mb_strlen($value) - 1) {
+            return $output.' ';
+        }
+
+        $remainder = mb_substr($value, $cursorPosition + 1);
+        $remainingSpace = $maxWidth - $offsetCursorPosition - ($offset ? 2 : 1);
+
+        if (mb_strlen($remainder) <= $remainingSpace) {
+            return $output.$remainder;
+        }
+
+        return $output.mb_substr($remainder, 0, $remainingSpace - 1).$this->dim('…');
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     }
 }

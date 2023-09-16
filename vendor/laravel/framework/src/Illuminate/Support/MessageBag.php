@@ -160,6 +160,7 @@ class MessageBag implements Jsonable, JsonSerializable, MessageBagContract, Mess
     }
 
     /**
+<<<<<<< HEAD
      * Determine if messages don't exist for all of the given keys.
      *
      * @param  array|string|null  $key
@@ -173,6 +174,8 @@ class MessageBag implements Jsonable, JsonSerializable, MessageBagContract, Mess
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the first message from the message bag for a given key.
      *
      * @param  string|null  $key

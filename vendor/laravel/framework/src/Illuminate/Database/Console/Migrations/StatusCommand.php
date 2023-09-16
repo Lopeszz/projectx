@@ -60,24 +60,37 @@ class StatusCommand extends BaseCommand
 
             $batches = $this->migrator->getRepository()->getMigrationBatches();
 
+<<<<<<< HEAD
             $migrations = $this->getStatusFor($ran, $batches)
                 ->when($this->option('pending'), fn ($collection) => $collection->filter(function ($migration) {
                     return str($migration[1])->contains('Pending');
                 }));
 
             if (count($migrations) > 0) {
+=======
+            if (count($migrations = $this->getStatusFor($ran, $batches)) > 0) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $this->newLine();
 
                 $this->components->twoColumnDetail('<fg=gray>Migration name</>', '<fg=gray>Batch / Status</>');
 
                 $migrations
+<<<<<<< HEAD
+=======
+                    ->when($this->option('pending'), fn ($collection) => $collection->filter(function ($migration) {
+                        return str($migration[1])->contains('Pending');
+                    }))
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                     ->each(
                         fn ($migration) => $this->components->twoColumnDetail($migration[0], $migration[1])
                     );
 
                 $this->newLine();
+<<<<<<< HEAD
             } elseif ($this->option('pending')) {
                 $this->components->info('No pending migrations');
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             } else {
                 $this->components->info('No migrations found');
             }

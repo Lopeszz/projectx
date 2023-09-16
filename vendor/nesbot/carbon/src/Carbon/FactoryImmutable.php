@@ -12,9 +12,12 @@
 namespace Carbon;
 
 use Closure;
+<<<<<<< HEAD
 use DateTimeImmutable;
 use DateTimeZone;
 use Psr\Clock\ClockInterface;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
 /**
  * A factory to generate CarbonImmutable instances with common settings.
@@ -114,6 +117,10 @@ use Psr\Clock\ClockInterface;
  * @method CarbonImmutable                                    maxValue()                                                                                                                   Create a Carbon instance for the greatest supported date.
  * @method CarbonImmutable                                    minValue()                                                                                                                   Create a Carbon instance for the lowest supported date.
  * @method void                                               mixin($mixin)                                                                                                                Mix another object into the class.
+<<<<<<< HEAD
+=======
+ * @method CarbonImmutable                                    now($tz = null)                                                                                                              Get a Carbon instance for the current date and time.
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
  * @method CarbonImmutable                                    parse($time = null, $tz = null)                                                                                              Create a carbon instance from a string.
  *                                                                                                                                                                                         This is an alias for the constructor that allows better fluent syntax
  *                                                                                                                                                                                         as it allows you to do Carbon::parse('Monday next week')->fn() rather
@@ -239,6 +246,7 @@ use Psr\Clock\ClockInterface;
  *
  * </autodoc>
  */
+<<<<<<< HEAD
 class FactoryImmutable extends Factory implements ClockInterface
 {
     protected $className = CarbonImmutable::class;
@@ -256,4 +264,9 @@ class FactoryImmutable extends Factory implements ClockInterface
 
         return new $className(null, $tz);
     }
+=======
+class FactoryImmutable extends Factory
+{
+    protected $className = CarbonImmutable::class;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

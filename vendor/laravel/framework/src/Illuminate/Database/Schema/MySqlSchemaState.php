@@ -53,7 +53,11 @@ class MySqlSchemaState extends SchemaState
     protected function appendMigrationData(string $path)
     {
         $process = $this->executeDumpProcess($this->makeProcess(
+<<<<<<< HEAD
             $this->baseDumpCommand().' '.$this->migrationTable.' --no-create-info --skip-extended-insert --skip-routines --compact --complete-insert'
+=======
+            $this->baseDumpCommand().' '.$this->migrationTable.' --no-create-info --skip-extended-insert --skip-routines --compact'
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         ), null, array_merge($this->baseVariables($this->connection->getConfig()), [
             //
         ]));

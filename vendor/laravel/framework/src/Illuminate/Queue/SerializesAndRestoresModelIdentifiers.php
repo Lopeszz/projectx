@@ -15,16 +15,26 @@ trait SerializesAndRestoresModelIdentifiers
      * Get the property value prepared for serialization.
      *
      * @param  mixed  $value
+<<<<<<< HEAD
      * @param  bool  $withRelations
      * @return mixed
      */
     protected function getSerializedPropertyValue($value, $withRelations = true)
+=======
+     * @return mixed
+     */
+    protected function getSerializedPropertyValue($value)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         if ($value instanceof QueueableCollection) {
             return (new ModelIdentifier(
                 $value->getQueueableClass(),
                 $value->getQueueableIds(),
+<<<<<<< HEAD
                 $withRelations ? $value->getQueueableRelations() : [],
+=======
+                $value->getQueueableRelations(),
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $value->getQueueableConnection()
             ))->useCollectionClass(
                 ($collectionClass = get_class($value)) !== EloquentCollection::class
@@ -37,7 +47,11 @@ trait SerializesAndRestoresModelIdentifiers
             return new ModelIdentifier(
                 get_class($value),
                 $value->getQueueableId(),
+<<<<<<< HEAD
                 $withRelations ? $value->getQueueableRelations() : [],
+=======
+                $value->getQueueableRelations(),
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $value->getQueueableConnection()
             );
         }

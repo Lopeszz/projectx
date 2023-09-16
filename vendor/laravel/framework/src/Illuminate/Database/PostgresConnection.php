@@ -2,7 +2,10 @@
 
 namespace Illuminate\Database;
 
+<<<<<<< HEAD
 use Exception;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use Illuminate\Database\PDO\PostgresDriver;
 use Illuminate\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
 use Illuminate\Database\Query\Processors\PostgresProcessor;
@@ -38,6 +41,7 @@ class PostgresConnection extends Connection
     }
 
     /**
+<<<<<<< HEAD
      * Determine if the given database exception was caused by a unique constraint violation.
      *
      * @param  \Exception  $exception
@@ -49,6 +53,8 @@ class PostgresConnection extends Connection
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get the default query grammar instance.
      *
      * @return \Illuminate\Database\Query\Grammars\PostgresGrammar

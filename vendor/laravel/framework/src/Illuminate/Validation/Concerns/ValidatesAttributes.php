@@ -599,9 +599,13 @@ trait ValidatesAttributes
 
         $matches = [];
 
+<<<<<<< HEAD
         if (preg_match('/^[+-]?\d*\.?(\d*)$/', $value, $matches) !== 1) {
             return false;
         }
+=======
+        preg_match('/^[+-]?\d*.(\d*)$/', $value, $matches);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
         $decimals = strlen(end($matches));
 
@@ -2352,7 +2356,11 @@ trait ValidatesAttributes
         // is the size. If it is a file, we take kilobytes, and for a string the
         // entire length of the string will be considered the attribute size.
         if (is_numeric($value) && $hasNumeric) {
+<<<<<<< HEAD
             return $this->ensureExponentWithinAllowedRange($attribute, $this->trim($value));
+=======
+            return $this->trim($value);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         } elseif (is_array($value)) {
             return count($value);
         } elseif ($value instanceof File) {
@@ -2469,6 +2477,7 @@ trait ValidatesAttributes
     {
         return is_string($value) ? trim($value) : $value;
     }
+<<<<<<< HEAD
 
     /**
      * Ensure the exponent is within the allowed range.
@@ -2499,4 +2508,6 @@ trait ValidatesAttributes
 
         return $value;
     }
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

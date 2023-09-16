@@ -7,7 +7,10 @@ namespace Doctrine\Common\Lexer;
 use ReflectionClass;
 use UnitEnum;
 
+<<<<<<< HEAD
 use function get_class;
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 use function implode;
 use function preg_split;
 use function sprintf;
@@ -27,16 +30,22 @@ abstract class AbstractLexer
 {
     /**
      * Lexer original input string.
+<<<<<<< HEAD
      *
      * @var string
      */
     private $input;
+=======
+     */
+    private string $input;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * Array of scanned tokens.
      *
      * @var list<Token<T, V>>
      */
+<<<<<<< HEAD
     private $tokens = [];
 
     /**
@@ -52,6 +61,19 @@ abstract class AbstractLexer
      * @var int
      */
     private $peek = 0;
+=======
+    private array $tokens = [];
+
+    /**
+     * Current lexer position in input string.
+     */
+    private int $position = 0;
+
+    /**
+     * Current peek of current lexer position.
+     */
+    private int $peek = 0;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * The next token in the input.
@@ -59,7 +81,11 @@ abstract class AbstractLexer
      * @var mixed[]|null
      * @psalm-var Token<T, V>|null
      */
+<<<<<<< HEAD
     public $lookahead;
+=======
+    public Token|null $lookahead;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * The last matched/seen token.
@@ -67,6 +93,7 @@ abstract class AbstractLexer
      * @var mixed[]|null
      * @psalm-var Token<T, V>|null
      */
+<<<<<<< HEAD
     public $token;
 
     /**
@@ -75,6 +102,14 @@ abstract class AbstractLexer
      * @var string|null
      */
     private $regex;
+=======
+    public Token|null $token;
+
+    /**
+     * Composed regex for input parsing.
+     */
+    private string|null $regex = null;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 
     /**
      * Sets the input data to be tokenized.
@@ -86,7 +121,11 @@ abstract class AbstractLexer
      *
      * @return void
      */
+<<<<<<< HEAD
     public function setInput($input)
+=======
+    public function setInput(string $input)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $this->input  = $input;
         $this->tokens = [];
@@ -125,7 +164,11 @@ abstract class AbstractLexer
      *
      * @return void
      */
+<<<<<<< HEAD
     public function resetPosition($position = 0)
+=======
+    public function resetPosition(int $position = 0)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $this->position = $position;
     }
@@ -133,11 +176,17 @@ abstract class AbstractLexer
     /**
      * Retrieve the original lexer's input until a given position.
      *
+<<<<<<< HEAD
      * @param int $position
      *
      * @return string
      */
     public function getInputUntilPosition($position)
+=======
+     * @return string
+     */
+    public function getInputUntilPosition(int $position)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         return substr($this->input, 0, $position);
     }
@@ -151,7 +200,11 @@ abstract class AbstractLexer
      *
      * @psalm-assert-if-true !=null $this->lookahead
      */
+<<<<<<< HEAD
     public function isNextToken($type)
+=======
+    public function isNextToken(int|string|UnitEnum $type)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         return $this->lookahead !== null && $this->lookahead->isA($type);
     }
@@ -194,7 +247,11 @@ abstract class AbstractLexer
      *
      * @return void
      */
+<<<<<<< HEAD
     public function skipUntil($type)
+=======
+    public function skipUntil(int|string|UnitEnum $type)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         while ($this->lookahead !== null && ! $this->lookahead->isA($type)) {
             $this->moveNext();
@@ -204,12 +261,18 @@ abstract class AbstractLexer
     /**
      * Checks if given value is identical to the given token.
      *
+<<<<<<< HEAD
      * @param string     $value
      * @param int|string $token
      *
      * @return bool
      */
     public function isA($value, $token)
+=======
+     * @return bool
+     */
+    public function isA(string $value, int|string|UnitEnum $token)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         return $this->getType($value) === $token;
     }
@@ -250,14 +313,22 @@ abstract class AbstractLexer
      *
      * @return void
      */
+<<<<<<< HEAD
     protected function scan($input)
+=======
+    protected function scan(string $input)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         if (! isset($this->regex)) {
             $this->regex = sprintf(
                 '/(%s)|%s/%s',
                 implode(')|(', $this->getCatchablePatterns()),
                 implode('|', $this->getNonCatchablePatterns()),
+<<<<<<< HEAD
                 $this->getModifiers()
+=======
+                $this->getModifiers(),
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
 
@@ -277,7 +348,11 @@ abstract class AbstractLexer
             $this->tokens[] = new Token(
                 $firstMatch,
                 $type,
+<<<<<<< HEAD
                 $match[1]
+=======
+                $match[1],
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
             );
         }
     }
@@ -289,10 +364,17 @@ abstract class AbstractLexer
      *
      * @return int|string
      */
+<<<<<<< HEAD
     public function getLiteral($token)
     {
         if ($token instanceof UnitEnum) {
             return get_class($token) . '::' . $token->name;
+=======
+    public function getLiteral(int|string|UnitEnum $token)
+    {
+        if ($token instanceof UnitEnum) {
+            return $token::class . '::' . $token->name;
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         }
 
         $className = static::class;
@@ -336,11 +418,18 @@ abstract class AbstractLexer
     /**
      * Retrieve token type. Also processes the token value if necessary.
      *
+<<<<<<< HEAD
      * @param string $value
      *
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * @return T|null
      *
      * @param-out V $value
      */
+<<<<<<< HEAD
     abstract protected function getType(&$value);
+=======
+    abstract protected function getType(string &$value);
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

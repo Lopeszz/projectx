@@ -247,6 +247,7 @@ class AssertableJsonString implements ArrayAccess, Countable
     }
 
     /**
+<<<<<<< HEAD
      * Assert that the given path in the response contains all of the expected values without looking at the order.
      *
      * @param  string  $path
@@ -261,6 +262,8 @@ class AssertableJsonString implements ArrayAccess, Countable
     }
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Assert that the response has a given JSON structure.
      *
      * @param  array|null  $structure

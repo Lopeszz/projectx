@@ -13,6 +13,7 @@ use Symfony\Component\Finder\Finder;
 class DiscoverEvents
 {
     /**
+<<<<<<< HEAD
      * The callback to be used to guess class names.
      *
      * @var callable(SplFileInfo, string): string|null
@@ -20,6 +21,8 @@ class DiscoverEvents
     public static $guessClassNamesUsingCallback;
 
     /**
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      * Get all of the events and listeners by searching the given listener directory.
      *
      * @param  string  $listenerPath
@@ -94,10 +97,13 @@ class DiscoverEvents
      */
     protected static function classFromFile(SplFileInfo $file, $basePath)
     {
+<<<<<<< HEAD
         if (static::$guessClassNamesUsingCallback) {
             return call_user_func(static::$guessClassNamesUsingCallback, $file, $basePath);
         }
 
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
         $class = trim(Str::replaceFirst($basePath, '', $file->getRealPath()), DIRECTORY_SEPARATOR);
 
         return str_replace(
@@ -106,6 +112,7 @@ class DiscoverEvents
             ucfirst(Str::replaceLast('.php', '', $class))
         );
     }
+<<<<<<< HEAD
 
     /**
      * Specify a callback to be used to guess class names.
@@ -117,4 +124,6 @@ class DiscoverEvents
     {
         static::$guessClassNamesUsingCallback = $callback;
     }
+=======
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
 }

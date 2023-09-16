@@ -16,7 +16,11 @@ class Parser
      *
      * @throws \InvalidArgumentException
      */
+<<<<<<< HEAD
     public static function parse(string $expression)
+=======
+    public static function parse($expression)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $name = static::name($expression);
 
@@ -35,7 +39,11 @@ class Parser
      *
      * @throws \InvalidArgumentException
      */
+<<<<<<< HEAD
     protected static function name(string $expression)
+=======
+    protected static function name($expression)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         if (! preg_match('/[^\s]+/', $expression, $matches)) {
             throw new InvalidArgumentException('Unable to determine command name from signature.');
@@ -45,7 +53,11 @@ class Parser
     }
 
     /**
+<<<<<<< HEAD
      * Extract all parameters from the tokens.
+=======
+     * Extract all of the parameters from the tokens.
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
      *
      * @param  array  $tokens
      * @return array
@@ -57,7 +69,11 @@ class Parser
         $options = [];
 
         foreach ($tokens as $token) {
+<<<<<<< HEAD
             if (preg_match('/^-{2,}(.*)/', $token, $matches)) {
+=======
+            if (preg_match('/-{2,}(.*)/', $token, $matches)) {
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
                 $options[] = static::parseOption($matches[1]);
             } else {
                 $arguments[] = static::parseArgument($token);
@@ -73,7 +89,11 @@ class Parser
      * @param  string  $token
      * @return \Symfony\Component\Console\Input\InputArgument
      */
+<<<<<<< HEAD
     protected static function parseArgument(string $token)
+=======
+    protected static function parseArgument($token)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         [$token, $description] = static::extractDescription($token);
 
@@ -99,7 +119,11 @@ class Parser
      * @param  string  $token
      * @return \Symfony\Component\Console\Input\InputOption
      */
+<<<<<<< HEAD
     protected static function parseOption(string $token)
+=======
+    protected static function parseOption($token)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         [$token, $description] = static::extractDescription($token);
 
@@ -132,7 +156,11 @@ class Parser
      * @param  string  $token
      * @return array
      */
+<<<<<<< HEAD
     protected static function extractDescription(string $token)
+=======
+    protected static function extractDescription($token)
+>>>>>>> 4c584ea2b7d485aa30030a331a53e1e239cdb6a1
     {
         $parts = preg_split('/\s+:\s+/', trim($token), 2);
 
