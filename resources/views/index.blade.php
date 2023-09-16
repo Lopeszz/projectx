@@ -11,58 +11,27 @@
         <!-- Slider main container -->
         <div class="hero-slider-active swiper-container">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Start Hero Single Slider Item -->
-                <div class="hero-single-slider-item swiper-slide">
-                    <!-- Hero Slider Image -->
-                    <div class="hero-slider-bg">
-                        <img src="images/hero-slider/home-1/hero-slider-1.jpg" alt="">
-                    </div>
-                    <!-- Hero Slider Content -->
-                    <div class="hero-slider-wrapper">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-auto">
-                                    <div class="hero-slider-content">
-                                        <h4 class="subtitle">Coleção 2023</h4>
-                                        <h2 class="title">O melhor evento <br> Festa dos Gabira </h2>
-                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">Compre agora</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Hero Single Slider Item -->
-                <!-- Start Hero Single Slider Item -->
-                <div class="hero-single-slider-item swiper-slide">
-                    <!-- Hero Slider Image -->
-                    <div class="hero-slider-bg">
-                        <img src="images/hero-slider/home-1/hero-slider-2.jpg" alt="">
-                    </div>
-                    <!-- Hero Slider Content -->
-                    <div class="hero-slider-wrapper">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-auto">
-                                    <div class="hero-slider-content">
-                                        <h4 class="subtitle">Coleção 2023</h4>
-                                        <h2 class="title">A Melhor Putaria<br>Festa do Sinal </h2>
-                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">Compre agora</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Hero Single Slider Item -->
+            <!-- Hero Slider Image -->
+            <div class="hero-slider-bg">
+                <img src="images/hero-slider/home-1/hero-slider-1.jpg" alt="">
             </div>
-
-            <!-- If we need pagination -->
-            <div class="swiper-pagination active-color-golden"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev d-none d-lg-block"></div>
-            <div class="swiper-button-next d-none d-lg-block"></div>
-        </div>
+            <!-- Hero Slider Content -->
+            <div class="hero-slider-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="hero-slider-content">
+                                <h4 class="subtitle">Coleção 2023</h4>
+                                <h2 class="title">O melhor evento <br> Festa dos Gabira </h2>
+                                <div id="wallet_container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Hero Single Slider Item -->
+    </div>
+    </div>
     </div>
     <!-- End Hero Slider Section-->
 
@@ -998,28 +967,39 @@
     <!-- ::::::::::::::All JS Files here :::::::::::::: -->
     <!-- Global Vendor, plugins JS -->
     <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/vendor/jquery-3.5.1.min.js"></script>
-    <script src="js/vendor/jquery-migrate-3.3.0.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/jquery-ui.min.js"></script>  -->
+                                                            <script src="js/vendor/jquery-3.5.1.min.js"></script>
+                                                            <script src="js/vendor/jquery-migrate-3.3.0.min.js"></script>
+                                                            <script src="js/vendor/popper.min.js"></script>
+                                                            <script src="js/vendor/bootstrap.min.js"></script>
+                                                            <script src="js/vendor/jquery-ui.min.js"></script>  -->
 
     <!--Plugins JS-->
     <!-- <script src="js/plugins/swiper-bundle.min.js"></script>
-    <script src="js/plugins/material-scrolltop.js"></script>
-    <script src="js/plugins/jquery.nice-select.min.js"></script>
-    <script src="js/plugins/jquery.zoom.min.js"></script>
-    <script src="js/plugins/venobox.min.js"></script>
-    <script src="js/plugins/jquery.waypoints.js"></script>
-    <script src="js/plugins/jquery.lineProgressbar.js"></script>
-    <script src="js/plugins/aos.min.js"></script>
-    <script src="js/plugins/jquery.instagramFeed.js"></script>
-    <script src="js/plugins/ajax-mail.js"></script> -->
+                                                            <script src="js/plugins/material-scrolltop.js"></script>
+                                                            <script src="js/plugins/jquery.nice-select.min.js"></script>
+                                                            <script src="js/plugins/jquery.zoom.min.js"></script>
+                                                            <script src="js/plugins/venobox.min.js"></script>
+                                                            <script src="js/plugins/jquery.waypoints.js"></script>
+                                                            <script src="js/plugins/jquery.lineProgressbar.js"></script>
+                                                            <script src="js/plugins/aos.min.js"></script>
+                                                            <script src="js/plugins/jquery.instagramFeed.js"></script>
+                                                            <script src="js/plugins/ajax-mail.js"></script> -->
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <script src="js/vendor/vendor.min.js"></script>
     <script src="js/plugins/plugins.min.js"></script>
-
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+        const mp = new MercadoPago('APP_USR-13f9187c-8f54-45ed-bf7e-357d21ad11bd');
+        const bricksBuilder = mp.bricks();
+    </script>
+    <script>
+        mp.bricks().create("wallet", "wallet_container", {
+            initialization: {
+                preferenceId: "{{ $preference->id }}",
+            },
+        });
+    </script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
 @endsection

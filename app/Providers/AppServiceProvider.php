@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use MercadoPago;
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
