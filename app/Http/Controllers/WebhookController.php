@@ -11,7 +11,7 @@ class WebhookController extends Controller
     public function handleWebhook(Request $request)
     {
         $payload = $request->all();
-        MercadoPago\SDK::setAccessToken('APP_USR-3800988944279872-091608-b8df341400640c48c804e2164e746251-326041310');
+        MercadoPago\SDK::setAccessToken(config('services.mercadopago.access_token'));
 
         // Aqui você pode processar os dados recebidos do webhook
         // e executar a lógica relacionada ao pagamento.
