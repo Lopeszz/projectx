@@ -30,7 +30,6 @@ class ClienteController extends Controller
         $cliente->senha = $request->senha;
         $cliente->celular = $request->celular;
         $cliente->nivel_acesso = $request->nivel_acesso;
-
         $cliente->save();
 
         return redirect('/');

@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use MercadoPago\Item;
 use MercadoPago\Preference;
 use MercadoPago;
@@ -18,7 +18,7 @@ class CheckoutController extends Controller
         $item = new Item();
         $item->title = 'Produto de Exemplo';
         $item->quantity = 1;
-        $item->unit_price = 100.00;
+        $item->unit_price = 0.01;
 
         // Cria uma preferência de pagamento
         $preference = new Preference();
@@ -26,7 +26,7 @@ class CheckoutController extends Controller
 
         $preference->payment_methods = [
             "excluded_payment_types" => [
-                ["id" => "credit_card"],
+                // ["id" => "credit_card"],
                 ["id" => "debit_card"],
                 ["id" => "ticket"],
                 ["id" => "atm"]
@@ -46,8 +46,13 @@ class CheckoutController extends Controller
         return view('index', ['preference' => $preference]);
     }
 
-    public function success()
+    public function success(Request $request)
     {
+        $email = $request->input('email');
+        if ($email) {
+            $this->sendSuccessEmail([], $email);
+        }
+
         return view('checkout.success');
     }
 
