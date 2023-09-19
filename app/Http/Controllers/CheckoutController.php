@@ -12,11 +12,10 @@ class CheckoutController extends Controller
     public function index()
     {
         // Configura as credenciais
-        MercadoPago\SDK::setAccessToken('APP_USR-3800988944279872-091608-b8df341400640c48c804e2164e746251-326041310');
-
+        MercadoPago\SDK::setAccessToken(config('services.mercadopago.access_token'));
         // Cria um item de compra
         $item = new Item();
-        $item->title = 'Produto de Exemplo';
+        $item->title = 'Ingresso da Festa';
         $item->quantity = 1;
         $item->unit_price = 0.01;
 
