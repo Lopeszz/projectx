@@ -16,16 +16,13 @@ use App\Http\Controllers\WebhookController;
 |
 */
 
-// Route::get('/', [CheckoutController::class, 'index'])->name('index');
+Route::get('/', [CheckoutController::class, 'index'])->name('index');
 
 Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
 Route::get('/checkout/failure', [CheckoutController::class, 'failure'])->name('checkout.failure');
 Route::get('/checkout/pending', [CheckoutController::class, 'pending'])->name('checkout.pending');
 
 Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/', function () {
     return view('login');
 });
 
